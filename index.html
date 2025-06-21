@@ -118,6 +118,36 @@
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
+        
+        /* 截图轮换样式 */
+        .screenshot-carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 750/1624;
+        }
+        
+        .screenshot-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            object-fit: contain;
+        }
+        
+        .screenshot-slide.active {
+            opacity: 1;
+            z-index: 10;
+        }
+        
+        .screenshot-slide.inactive {
+            opacity: 0;
+            z-index: 1;
+        }
     </style>
 </head>
 <body class="bg-gray-50 font-sora">
@@ -151,7 +181,7 @@
                 <div class="text-left">
                     <!-- 主标题 -->
                     <div class="mb-8">
-                        <h1 class="text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                        <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                             AI智能音视频<br>翻译新时代
                         </h1>
                         <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full mx-0 lg:mx-0 mb-6"></div>
@@ -175,16 +205,16 @@
                     <!-- 功能标签 -->
                     <div class="flex flex-wrap gap-3 mb-12">
                         <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
-                            AI智能翻译
+                            智能翻译
                         </span>
                         <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
                             同声传译
                         </span>
                         <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
-                            视频聊天
+                            通话翻译
                         </span>
                         <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
-                            会议录音
+                            录音总结
                         </span>
                     </div>
                 </div>
@@ -196,7 +226,14 @@
                         <div class="relative">
                             <div class="w-96 h-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-[3rem] p-1 shadow-2xl">
                                 <div class="bg-black rounded-[2.5rem] p-2">
-                                    <img src="images/screnshot.png" alt="Hyper MZT 应用截图" class="w-full h-auto rounded-[2rem] shadow-inner">
+                                    <!-- 轮换展示的截图 -->
+                                    <div class="screenshot-carousel relative">
+                                        <img src="images/screenshot-1.png" alt="Hyper MZT 应用截图 1" class="screenshot-slide active w-full rounded-[2rem] shadow-inner">
+                                        <img src="images/screenshot-2.png" alt="Hyper MZT 应用截图 2" class="screenshot-slide inactive w-full rounded-[2rem] shadow-inner">
+                                        <img src="images/screenshot-3.png" alt="Hyper MZT 应用截图 3" class="screenshot-slide inactive w-full rounded-[2rem] shadow-inner">
+                                        <img src="images/screenshot-4.png" alt="Hyper MZT 应用截图 4" class="screenshot-slide inactive w-full rounded-[2rem] shadow-inner">
+                                        <img src="images/screenshot-5.png" alt="Hyper MZT 应用截图 5" class="screenshot-slide inactive w-full rounded-[2rem] shadow-inner">
+                                    </div>
                                 </div>
                             </div>
                             <!-- 装饰元素 -->
@@ -224,7 +261,7 @@
 
     
     <!-- 功能特性 -->
-    <section id="features" class="py-20 bg-white">
+    <section id="features" class="py-36 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">强大功能，智能体验</h2>
@@ -316,7 +353,7 @@
     </section>
 
     <!-- 产品优势 -->
-    <section id="advantages" class="py-20 bg-gray-50">
+    <section id="advantages" class="py-36 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">为什么选择 Hyper MZT</h2>
@@ -369,7 +406,7 @@
     </section>
 
     <!-- 下载区域 -->
-    <section id="download" class="py-20 bg-primary">
+    <section id="download" class="py-36 bg-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-bold text-white mb-4">立即下载，开启智能翻译之旅</h2>
             <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto">
@@ -454,6 +491,46 @@
                     });
                 }
             });
+        });
+
+        // 截图轮换功能
+        function initScreenshotCarousel() {
+            const slides = document.querySelectorAll('.screenshot-slide');
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // 如果没有找到图片，直接返回
+            if (totalSlides === 0) {
+                return;
+            }
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                        slide.classList.remove('inactive');
+                    } else {
+                        slide.classList.add('inactive');
+                        slide.classList.remove('active');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            // 初始化第一张图片
+            showSlide(0);
+            
+            // 每3秒切换一次截图
+            setInterval(nextSlide, 3000);
+        }
+
+        // 页面加载完成后初始化轮换功能
+        document.addEventListener('DOMContentLoaded', function() {
+            initScreenshotCarousel();
         });
     </script>
 </body>
