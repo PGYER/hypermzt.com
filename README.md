@@ -1,7 +1,5 @@
 # Hyper MZT - AI智能音视频翻译应用
 
-![Hyper MZT Logo](images/logo.jpg)
-
 ## 📱 项目简介
 
 Hyper MZT 是一款集智能AI、同声传译、面对面翻译、音视频翻译、AI高效会议功能于一体的智能应用。为用户提供便捷、智能的音视频处理与沟通体验，支持100+语言的实时翻译，让跨语言沟通变得简单自然。
@@ -97,23 +95,6 @@ npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --minify
 - **响应式布局**: 完美适配各种设备屏幕
 - **流畅动画**: 丰富的交互动画效果
 - **优雅字体**: 使用Sora字体提升视觉体验
-
-## 📁 项目结构
-
-```
-hypermzt.com/
-├── index.html          # 主页面文件
-├── package.json        # 项目依赖配置
-├── tailwindcss-dev.sh  # Tailwind CSS 开发脚本
-├── README.md          # 项目说明文档
-├── css/               # CSS 样式文件目录
-├── font/              # 字体文件目录
-├── images/            # 图片资源目录
-│   ├── logo.jpg       # 应用Logo
-│   ├── qrcode.png     # 下载二维码
-│   └── screnshot.png  # 应用截图
-└── node_modules/      # Node.js 依赖包
-```
 
 ## 🔧 开发说明
 
