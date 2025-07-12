@@ -70,27 +70,17 @@ function updateScreenshots(lang) {
     carousels.forEach(carousel => {
         const slides = carousel.querySelectorAll('.screenshot-slide');
         
-        // 定义截图映射
-        const screenshotMap = {
-            zh: {
-                'screenshot-4a.png': 'screenshot-4a.png',
-                'screenshot-4b.png': 'screenshot-4b.png', 
-                'screenshot-4c.png': 'screenshot-4c.png'
-            },
-            en: {
-                'screenshot-4a.png': 'screenshot-4a-en.png',
-                'screenshot-4b.png': 'screenshot-4b-en.png',
-                'screenshot-4c.png': 'screenshot-4c-en.png'
-            }
-        };
+        // 从语言包中获取截图映射
+        const screenshotMap = translations[lang]?.screenshots;
+        if (!screenshotMap) return;
         
         // 更新每个截图的src
         slides.forEach(slide => {
             const currentSrc = slide.src;
             const fileName = currentSrc.split('/').pop(); // 获取文件名
             
-            if (screenshotMap[lang] && screenshotMap[lang][fileName]) {
-                const newFileName = screenshotMap[lang][fileName];
+            if (screenshotMap[fileName]) {
+                const newFileName = screenshotMap[fileName];
                 const newSrc = currentSrc.replace(fileName, newFileName);
                 slide.src = newSrc;
             }

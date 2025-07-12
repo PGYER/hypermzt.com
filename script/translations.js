@@ -238,6 +238,13 @@ const translations = {
             contactDesc: "如有问题或建议，欢迎联系我们",
             email: "客服邮箱：",
             copyright: "© 2025 Hyper MZT. 保留所有权利。"
+        },
+        
+        // 截图映射
+        screenshots: {
+            'screenshot-4a.png': 'screenshot-4a.png',
+            'screenshot-4b.png': 'screenshot-4b.png',
+            'screenshot-4c.png': 'screenshot-4c.png'
         }
     },
     
@@ -479,6 +486,13 @@ const translations = {
             contactDesc: "Feel free to contact us",
             email: "Customer Service Email: ",
             copyright: "© 2025 Hyper MZT. All rights reserved."
+        },
+        
+        // Screenshot mapping
+        screenshots: {
+            'screenshot-4a.png': 'screenshot-4a-en.png',
+            'screenshot-4b.png': 'screenshot-4b-en.png',
+            'screenshot-4c.png': 'screenshot-4c-en.png'
         }
     }
 }; 
