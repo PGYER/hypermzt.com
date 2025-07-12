@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyper MZT - AI智能硬件通信中枢 | 同声传译·音视频通话·会议记录·多设备集成</title>
+    <title data-translate="page.title">Hyper MZT - AI智能硬件通信中枢 | 同声传译·音视频通话·会议记录·多设备集成</title>
     <link rel="stylesheet" href="css/output.css">
     <style>
        
@@ -26,11 +26,18 @@
                 <!-- 桌面端菜单 -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#features" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">功能特性</a>
-                        <a href="#scenarios" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">使用场景</a>
-                        <a href="#advantages" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">产品优势</a>
-                        <a href="#faq" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">常见问题</a>
-                        <a href="#download" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">立即下载</a>
+                        <a href="#features" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" data-translate="nav.features">功能特性</a>
+                        <a href="#scenarios" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" data-translate="nav.scenarios">使用场景</a>
+                        <a href="#advantages" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" data-translate="nav.advantages">产品优势</a>
+                        <a href="#faq" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" data-translate="nav.faq">常见问题</a>
+                        <a href="#download" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200" data-translate="nav.download">立即下载</a>
+                        
+                        <!-- 语言切换按钮 -->
+                        <div class="relative">
+                            <button id="language-toggle" class="flex items-center text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 border border-gray-200 hover:border-primary cursor-pointer">
+                                <span id="current-lang">中文</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 
@@ -69,7 +76,7 @@
                                 <svg class="w-6 h-6 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                                 </svg>
-                                功能特性
+                                <span data-translate="nav.features">功能特性</span>
                             </div>
                         </a>
                         
@@ -78,7 +85,7 @@
                                 <svg class="w-6 h-6 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                                 </svg>
-                                使用场景
+                                <span data-translate="nav.scenarios">使用场景</span>
                             </div>
                         </a>
                         
@@ -87,7 +94,7 @@
                                 <svg class="w-6 h-6 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
-                                产品优势
+                                <span data-translate="nav.advantages">产品优势</span>
                             </div>
                         </a>
                         
@@ -96,7 +103,7 @@
                                 <svg class="w-6 h-6 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
-                                常见问题
+                                <span data-translate="nav.faq">常见问题</span>
                             </div>
                         </a>
                         
@@ -105,16 +112,26 @@
                                 <svg class="w-6 h-6 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                 </svg>
-                                立即下载
+                                <span data-translate="nav.download">立即下载</span>
                             </div>
                         </a>
+                        
+                        <!-- 移动端语言切换按钮 -->
+                        <button id="mobile-language-toggle" class="mobile-menu-item block w-full text-left text-lg font-medium text-gray-900 hover:text-primary transition-colors duration-200 py-3 border-b border-gray-100 cursor-pointer">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
+                                </svg>
+                                <span id="mobile-current-lang">中文</span>
+                            </div>
+                        </button>
                     </div>
                 </div>
                 
                 <!-- 菜单底部 -->
                 <div class="p-6 border-t border-gray-200">
                     <div class="text-center">
-                        <p class="text-sm text-gray-500 mb-4">专业的AI智能音视频翻译应用</p>
+                        <p class="text-sm text-gray-500 mb-4" data-translate="mobile.description">专业的AI智能音视频翻译应用</p>
                         <a href="mailto:service@hypermzt.com" class="text-primary hover:text-secondary text-sm font-medium transition-colors duration-200">
                             联系我们
                         </a>
@@ -137,14 +154,14 @@
                 <div class="lg:col-span-3 text-left">
                     <!-- 主标题 -->
                     <div class="mb-8">
-                        <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" data-translate="hero.title">
                             让智能设备更聪明<br>是我们想做的事
                         </h1>
                         <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-violet-500 rounded-full mx-0 lg:mx-0 mb-6"></div>
                     </div>
                     
                     <!-- 描述文字 -->
-                    <p class="text-xl lg:text-2xl text-gray-200 mb-12 leading-relaxed">
+                    <p class="text-xl lg:text-2xl text-gray-200 mb-12 leading-relaxed" data-translate="hero.description">
                         Hyper MZT 是专为智能设备设计的AI通信中枢应用，具备同声传译、音视频通话、会议记录总结及多应用集成等功能，可提供跨语言、跨平台的高效沟通体验，蓝牙耳机、智能眼镜等多种硬件设备均可接入使用。
                     </p>
                     
@@ -154,22 +171,22 @@
                             <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                             </svg>
-                            立即下载
+                            <span data-translate="hero.downloadButton">立即下载</span>
                         </a>
                     </div>
                     
                     <!-- 功能标签 -->
                     <div class="flex flex-wrap gap-3 mb-12">
-                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
+                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30" data-translate="hero.tags.smartTranslation">
                             智能翻译
                         </span>
-                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
+                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30" data-translate="hero.tags.simultaneous">
                             同声传译
                         </span>
-                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
+                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30" data-translate="hero.tags.callTranslation">
                             通话翻译
                         </span>
-                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30">
+                        <span class="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white border-opacity-30" data-translate="hero.tags.recordingSummary">
                             录音总结
                         </span>
                     </div>
@@ -216,8 +233,8 @@
     <section id="features" class="py-36 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">强大功能，智能体验</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-translate="features.title">强大功能，智能体验</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="features.subtitle">
                     全方位的AI智能功能，让您的沟通无障碍，工作更高效
                 </p>
             </div>
@@ -230,8 +247,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">AI助手</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="features.aiAssistant.title">AI助手</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="features.aiAssistant.description">
                         智能AI助手为您提供实时翻译、语音识别、智能对话等功能，让沟通更加便捷高效。
                     </p>
                 </div>
@@ -243,8 +260,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">会议录音</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="features.meetingRecording.title">会议录音</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="features.meetingRecording.description">
                         高质量会议录音功能，支持实时转写和翻译，让您不错过任何重要信息。
                     </p>
                 </div>
@@ -256,8 +273,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">同声传译</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="features.simultaneous.title">同声传译</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="features.simultaneous.description">
                         实时同声传译技术，支持100+语言，让跨语言沟通变得简单自然。
                     </p>
                 </div>
@@ -269,8 +286,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">视频聊天</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="features.videoChat.title">视频聊天</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="features.videoChat.description">
                         高清视频聊天功能，支持实时翻译字幕，让面对面交流无障碍。
                     </p>
                 </div>
@@ -282,8 +299,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">双向模式</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="features.bidirectional.title">双向模式</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="features.bidirectional.description">
                         智能双向翻译模式，支持语音和文字的双向转换，满足不同场景需求。
                     </p>
                 </div>
@@ -295,8 +312,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">免费畅享</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="features.freeTrial.title">免费畅享</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="features.freeTrial.description">
                         免费试用，无限制使用核心功能，让每个人都能享受AI翻译的便利。
                     </p>
                 </div>
@@ -313,7 +330,7 @@
                     <div class="relative">
                         <div class="w-96 h-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-[3rem] p-1 shadow-2xl">
                             <div class="bg-black rounded-[2.5rem] p-2">
-                                <img src="images/screenshot-6.png" alt="同声传译功能截图" class="w-full rounded-[2rem] shadow-inner">
+                                <img src="images/screenshot-6.png" alt="同声传译功能截图" class="w-full rounded-[2rem] shadow-inner" data-translate-alt="simultaneousSection.imageAlt">
                             </div>
                         </div>
                         <!-- 装饰元素 -->
@@ -325,26 +342,26 @@
                 <!-- 右侧说明文字 -->
                 <div class="order-1 lg:order-2">
                     <div class="mb-8">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">同声传译</h2>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6" data-translate="simultaneousSection.title">同声传译</h2>
                         <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mb-6"></div>
                     </div>
                     
-                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6" data-translate="simultaneousSection.description">
                         让语言不再成为障碍。Hyper MZT支持100+种语言的实时语音翻译，双语字幕自动呈现，适配多场景通话与面对面交流。即使在嘈杂环境中，也能稳定识别并高效呈现双语对话，帮助你跨语种轻松沟通。
                     </p>
                     
                     <!-- 功能标签 -->
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium" data-translate="simultaneousSection.tags.languages">
                             100+语言支持
                         </span>
-                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium" data-translate="simultaneousSection.tags.realtime">
                             实时翻译
                         </span>
-                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium" data-translate="simultaneousSection.tags.subtitles">
                             双语字幕
                         </span>
-                        <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium" data-translate="simultaneousSection.tags.noiseReduction">
                             降噪识别
                         </span>
                     </div>
@@ -360,27 +377,27 @@
                 <!-- 左侧说明文字 -->
                 <div>
                     <div class="mb-8">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">音视频翻译</h2>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6" data-translate="videoTranslation.title">音视频翻译</h2>
                         <div class="w-24 h-1 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mb-6"></div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">边通话，边翻译，边显示</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4" data-translate="videoTranslation.subtitle">边通话，边翻译，边显示</h3>
                     </div>
                     
-                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6" data-translate="videoTranslation.description">
                         无论是语音还是视频通话，Hyper MZT 都能实时进行双向翻译，自动显示字幕。无需安装App也可通过网页接入，电脑端点击链接即可加入通话，实现灵活沟通、快速连接。
                     </p>
                     
                     <!-- 功能标签 -->
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium" data-translate="videoTranslation.tags.bidirectional">
                             双向翻译
                         </span>
-                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium" data-translate="videoTranslation.tags.autoSubtitles">
                             自动字幕
                         </span>
-                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium" data-translate="videoTranslation.tags.webAccess">
                             网页接入
                         </span>
-                        <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium" data-translate="videoTranslation.tags.quickConnect">
                             快速连接
                         </span>
                     </div>
@@ -391,7 +408,7 @@
                     <div class="relative">
                         <div class="w-96 h-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-[3rem] p-1 shadow-2xl">
                             <div class="bg-black rounded-[2.5rem] p-2">
-                                <img src="images/screenshot-3.png" alt="音视频翻译功能截图" class="w-full rounded-[2rem] shadow-inner">
+                                <img src="images/screenshot-3.png" alt="音视频翻译功能截图" class="w-full rounded-[2rem] shadow-inner" data-translate-alt="videoTranslation.imageAlt">
                             </div>
                         </div>
                         <!-- 装饰元素 -->
@@ -429,51 +446,48 @@
                 <!-- 右侧说明文字 -->
                 <div class="order-1 lg:order-2">
                     <div class="mb-8">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">AI 会议记录</h2>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6" data-translate="aiMeeting.title">AI 会议记录</h2>
                         <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mb-6"></div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">一键录音，自动生成内容结构</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4" data-translate="aiMeeting.subtitle">一键录音，自动生成内容结构</h3>
                     </div>
                     
                     <div class="space-y-4 mb-6">
                         <div class="flex items-start">
                             <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                             <div>
-                                <span class="font-semibold text-gray-800">摘要：</span>
-                                <span class="text-gray-600">抓取重点，快速回顾</span>
+                                <span class="font-semibold text-gray-800" data-translate="aiMeeting.summary">摘要：抓取重点，快速回顾</span>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                             <div>
-                                <span class="font-semibold text-gray-800">大纲：</span>
-                                <span class="text-gray-600">分段整理，逻辑清晰</span>
+                                <span class="font-semibold text-gray-800" data-translate="aiMeeting.outline">大纲：分段整理，逻辑清晰</span>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                             <div>
-                                <span class="font-semibold text-gray-800">思维导图：</span>
-                                <span class="text-gray-600">结构清晰，便于汇报</span>
+                                <span class="font-semibold text-gray-800" data-translate="aiMeeting.mindmap">思维导图：结构清晰，便于汇报</span>
                             </div>
                         </div>
                     </div>
                     
-                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6" data-translate="aiMeeting.description">
                         适合远程协作、头脑风暴、团队总结等多种场景。
                     </p>
                     
                     <!-- 功能标签 -->
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium" data-translate="aiMeeting.tags.smartSummary">
                             智能摘要
                         </span>
-                        <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium" data-translate="aiMeeting.tags.structure">
                             结构整理
                         </span>
-                        <span class="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium" data-translate="aiMeeting.tags.mindmap">
                             思维导图
                         </span>
-                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium" data-translate="aiMeeting.tags.multiScene">
                             多场景适用
                         </span>
                     </div>
@@ -489,11 +503,11 @@
                 <!-- 左侧说明文字 -->
                 <div>
                     <div class="mb-8">
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">双向模式</h2>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6" data-translate="bidirectionalMode.title">双向模式</h2>
                         <div class="w-24 h-1 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full mb-6"></div>
                     </div>
                     
-                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6" data-translate="bidirectionalMode.description">
                         支持「智能设备＋手机」协同翻译：一人佩戴耳机或眼镜，另一人对着手机说话。双方谈话内容均会被翻译为对方的语言，从各自的设备中低延迟播放支持100+语言互译、多语种切换，适用于旅游、教学、商谈等场景等场景。
                     </p>
                     
@@ -503,40 +517,40 @@
                             <svg class="w-5 h-5 text-indigo-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-700">智能设备与手机协同工作</span>
+                            <span class="text-gray-700" data-translate="bidirectionalMode.features.0">智能设备与手机协同工作</span>
                         </div>
                         <div class="flex items-center">
                             <svg class="w-5 h-5 text-indigo-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-700">低延迟实时翻译播放</span>
+                            <span class="text-gray-700" data-translate="bidirectionalMode.features.1">低延迟实时翻译播放</span>
                         </div>
                         <div class="flex items-center">
                             <svg class="w-5 h-5 text-indigo-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-700">100+语言互译支持</span>
+                            <span class="text-gray-700" data-translate="bidirectionalMode.features.2">100+语言互译支持</span>
                         </div>
                         <div class="flex items-center">
                             <svg class="w-5 h-5 text-indigo-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span class="text-gray-700">多语种快速切换</span>
+                            <span class="text-gray-700" data-translate="bidirectionalMode.features.3">多语种快速切换</span>
                         </div>
                     </div>
                     
                     <!-- 功能标签 -->
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium" data-translate="bidirectionalMode.tags.deviceSync">
                             设备协同
                         </span>
-                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium" data-translate="bidirectionalMode.tags.lowLatency">
                             低延迟
                         </span>
-                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium" data-translate="bidirectionalMode.tags.multiLanguage">
                             多语言
                         </span>
-                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium" data-translate="bidirectionalMode.tags.richScenes">
                             场景丰富
                         </span>
                     </div>
@@ -547,7 +561,7 @@
                     <div class="relative">
                         <div class="w-96 h-auto bg-gradient-to-b from-gray-800 to-gray-900 rounded-[3rem] p-1 shadow-2xl">
                             <div class="bg-black rounded-[2.5rem] p-2">
-                                <img src="images/screenshot-2.png" alt="双向模式功能截图" class="w-full rounded-[2rem] shadow-inner">
+                                <img src="images/screenshot-2.png" alt="双向模式功能截图" class="w-full rounded-[2rem] shadow-inner" data-translate-alt="bidirectionalMode.imageAlt">
                             </div>
                         </div>
                         <!-- 装饰元素 -->
@@ -563,9 +577,9 @@
     <section class="py-36 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">让智能硬件更智能</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-6" data-translate="smartHardware.title">让智能硬件更智能</h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-500 rounded-full mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed" data-translate="smartHardware.description">
                     Hyper MZT专为智能硬件设备设计，通过简单的连接配对，即可为您的蓝牙耳机、智能眼镜、智能手表等设备赋予强大的AI能力，让普通设备瞬间升级为智能AI设备。
                 </p>
             </div>
@@ -573,19 +587,19 @@
             <!-- 支持设备类型 -->
             <div class="text-center">
                 <div class="flex flex-wrap justify-center gap-4">
-                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm">
+                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm" data-translate="smartHardware.devices.0">
                         蓝牙耳机
                     </span>
-                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm">
+                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm" data-translate="smartHardware.devices.1">
                         智能眼镜
                     </span>
-                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm">
+                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm" data-translate="smartHardware.devices.2">
                         智能手表
                     </span>
-                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm">
+                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm" data-translate="smartHardware.devices.3">
                         智能音箱
                     </span>
-                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm">
+                    <span class="px-6 py-3 bg-white bg-opacity-80 backdrop-blur-sm rounded-full text-gray-800 font-medium border border-gray-200 shadow-sm" data-translate="smartHardware.devices.4">
                         智能手环
                     </span>
                 </div>
@@ -597,8 +611,8 @@
     <section id="scenarios" class="py-36 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">使用场景</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-translate="scenarios.title">使用场景</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="scenarios.subtitle">
                     适用于各种生活和工作场景，让您的智能设备发挥更大价值
                 </p>
             </div>
@@ -612,13 +626,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">商务会议</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" data-translate="scenarios.business.title">商务会议</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4" data-translate="scenarios.business.description">
                         佩戴智能眼镜或耳机参加国际会议，实时获得翻译字幕和语音，轻松理解外籍同事发言，提升会议效率。
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">智能眼镜</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">蓝牙耳机</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs" data-translate="scenarios.business.devices.0">智能眼镜</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs" data-translate="scenarios.business.devices.1">蓝牙耳机</span>
                     </div>
                 </div>
 
@@ -629,13 +643,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">国际旅行</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" data-translate="scenarios.travel.title">国际旅行</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4" data-translate="scenarios.travel.description">
                         出国旅游时，通过智能手表快速启动翻译，与当地人无障碍交流，询问路线、点餐购物更加便捷。
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs">智能手表</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">智能眼镜</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs" data-translate="scenarios.travel.devices.0">智能手表</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs" data-translate="scenarios.travel.devices.1">智能眼镜</span>
                     </div>
                 </div>
 
@@ -646,13 +660,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">在线教育</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" data-translate="scenarios.education.title">在线教育</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4" data-translate="scenarios.education.description">
                         学习外语课程时，智能音箱提供实时翻译和发音指导，智能眼镜显示字幕，让学习更加高效。
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs">智能音箱</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">智能眼镜</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs" data-translate="scenarios.education.devices.0">智能音箱</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs" data-translate="scenarios.education.devices.1">智能眼镜</span>
                     </div>
                 </div>
 
@@ -663,13 +677,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">医疗咨询</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" data-translate="scenarios.medical.title">医疗咨询</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4" data-translate="scenarios.medical.description">
                         在国外就医时，通过智能设备实时翻译医患对话，确保病情描述准确，治疗方案理解无误。
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">蓝牙耳机</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">智能眼镜</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs" data-translate="scenarios.medical.devices.0">蓝牙耳机</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs" data-translate="scenarios.medical.devices.1">智能眼镜</span>
                     </div>
                 </div>
 
@@ -680,13 +694,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">客户服务</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" data-translate="scenarios.customerService.title">客户服务</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4" data-translate="scenarios.customerService.description">
                         客服人员佩戴智能设备，实时翻译客户需求，提供多语言服务支持，提升客户满意度。
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">蓝牙耳机</span>
-                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs">智能手表</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs" data-translate="scenarios.customerService.devices.0">蓝牙耳机</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs" data-translate="scenarios.customerService.devices.1">智能手表</span>
                     </div>
                 </div>
 
@@ -697,13 +711,13 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">家庭生活</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4" data-translate="scenarios.family.title">家庭生活</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4" data-translate="scenarios.family.description">
                         家庭成员使用不同语言时，智能音箱提供实时翻译，让跨语言家庭沟通更加和谐温馨。
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs">智能音箱</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">蓝牙耳机</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs" data-translate="scenarios.family.devices.0">智能音箱</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs" data-translate="scenarios.family.devices.1">蓝牙耳机</span>
                     </div>
                 </div>
             </div>
@@ -714,8 +728,8 @@
     <section id="advantages" class="py-36 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">为什么选择 Hyper MZT</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-translate="advantages.title">为什么选择 Hyper MZT</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="advantages.subtitle">
                     专业的AI技术，贴心的用户体验，让您的沟通更加智能高效
                 </p>
             </div>
@@ -728,8 +742,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">免费试用</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="advantages.freeTrial.title">免费试用</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="advantages.freeTrial.description">
                         无需付费即可体验所有核心功能，让您充分了解产品价值后再做决定。
                     </p>
                 </div>
@@ -741,8 +755,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">100+语言畅聊全球</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="advantages.languages.title">100+语言畅聊全球</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="advantages.languages.description">
                         支持全球100多种语言的实时翻译，让您与世界各地的朋友无障碍沟通。
                     </p>
                 </div>
@@ -754,8 +768,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">生活商务场景全覆盖</h3>
-                    <p class="text-gray-600 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="advantages.coverage.title">生活商务场景全覆盖</h3>
+                    <p class="text-gray-600 leading-relaxed" data-translate="advantages.coverage.description">
                         无论是日常交流还是商务会议，Hyper MZT都能为您提供专业的翻译服务。
                     </p>
                 </div>
@@ -767,8 +781,8 @@
     <section id="faq" class="py-36 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">常见问题</h2>
-                <p class="text-xl text-gray-600">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-translate="faq.title">常见问题</h2>
+                <p class="text-xl text-gray-600" data-translate="faq.subtitle">
                     关于 Hyper MZT 的常见问题解答
                 </p>
             </div>
@@ -777,13 +791,13 @@
                 <!-- FAQ 项目 1 -->
                 <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden">
                     <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between cursor-pointer">
-                        <span class="text-lg font-semibold text-gray-900">Hyper MZT 支持哪些语言？</span>
+                        <span class="text-lg font-semibold text-gray-900" data-translate="faq.questions.0.question">Hyper MZT 支持哪些语言？</span>
                         <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden px-8 pb-6">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-translate="faq.questions.0.answer">
                             Hyper MZT 支持全球100多种语言的实时翻译，包括中文、英文、日文、韩文、法文、德文、西班牙文、俄文等主流语言，以及许多小语种。我们持续更新语言库，确保覆盖更多地区用户的需求。
                         </p>
                     </div>
@@ -792,13 +806,13 @@
                 <!-- FAQ 项目 2 -->
                 <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden">
                     <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between cursor-pointer">
-                        <span class="text-lg font-semibold text-gray-900">如何连接蓝牙耳机或智能眼镜？</span>
+                        <span class="text-lg font-semibold text-gray-900" data-translate="faq.questions.1.question">如何连接蓝牙耳机或智能眼镜？</span>
                         <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden px-8 pb-6">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-translate="faq.questions.1.answer">
                             在应用设置中找到"设备连接"选项，选择您的蓝牙耳机或智能眼镜进行配对。支持MZT全系列设备，如智能眼镜、智能耳机、智能音箱、智能手表等，连接成功后即可享受实时翻译功能。
                         </p>
                     </div>
@@ -807,13 +821,13 @@
                 <!-- FAQ 项目 3 -->
                 <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden">
                     <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between cursor-pointer">
-                        <span class="text-lg font-semibold text-gray-900">翻译的准确度如何？</span>
+                        <span class="text-lg font-semibold text-gray-900" data-translate="faq.questions.2.question">翻译的准确度如何？</span>
                         <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden px-8 pb-6">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-translate="faq.questions.2.answer">
                             我们采用先进的AI翻译技术，结合深度学习和神经网络，翻译准确度达到95%以上。对于日常对话、商务交流等场景，翻译质量非常可靠。同时支持专业术语识别，在特定领域也能提供准确的翻译服务。
                         </p>
                     </div>
@@ -822,13 +836,13 @@
                 <!-- FAQ 项目 4 -->
                 <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden">
                     <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between cursor-pointer">
-                        <span class="text-lg font-semibold text-gray-900">是否需要网络连接？</span>
+                        <span class="text-lg font-semibold text-gray-900" data-translate="faq.questions.3.question">是否需要网络连接？</span>
                         <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden px-8 pb-6">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-translate="faq.questions.3.answer">
                             是的，实时翻译功能需要网络连接。我们建议使用WiFi或4G/5G网络以获得最佳体验。部分基础功能支持离线使用，但完整功能需要联网。我们也在开发离线翻译包，未来将支持更多离线功能。
                         </p>
                     </div>
@@ -837,13 +851,13 @@
                 <!-- FAQ 项目 5 -->
                 <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden">
                     <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between cursor-pointer">
-                        <span class="text-lg font-semibold text-gray-900">会议录音功能如何工作？</span>
+                        <span class="text-lg font-semibold text-gray-900" data-translate="faq.questions.4.question">会议录音功能如何工作？</span>
                         <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden px-8 pb-6">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-translate="faq.questions.4.answer">
                             点击录音按钮开始录制会议内容，系统会实时转写语音为文字，并自动生成摘要、大纲和思维导图。录音结束后，您可以查看完整的会议记录，编辑内容，或分享给团队成员。支持多种导出格式。
                         </p>
                     </div>
@@ -852,13 +866,13 @@
                 <!-- FAQ 项目 7 -->
                 <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden">
                     <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between cursor-pointer">
-                        <span class="text-lg font-semibold text-gray-900">如何保护隐私和数据安全？</span>
+                        <span class="text-lg font-semibold text-gray-900" data-translate="faq.questions.5.question">如何保护隐私和数据安全？</span>
                         <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden px-8 pb-6">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-translate="faq.questions.5.answer">
                             我们高度重视用户隐私和数据安全。所有语音和文字数据都经过加密传输和存储，不会泄露给第三方。您可以随时删除录音和聊天记录，我们也提供自动清理功能。符合GDPR等国际隐私保护标准。
                         </p>
                     </div>
@@ -867,13 +881,13 @@
                 <!-- FAQ 项目 8 -->
                 <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden">
                     <button class="faq-question w-full px-8 py-6 text-left flex items-center justify-between cursor-pointer">
-                        <span class="text-lg font-semibold text-gray-900">遇到问题如何获得帮助？</span>
+                        <span class="text-lg font-semibold text-gray-900" data-translate="faq.questions.6.question">遇到问题如何获得帮助？</span>
                         <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="faq-answer hidden px-8 pb-6">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-translate="faq.questions.6.answer">
                             您可以通过以下方式获得帮助：1) 应用内的"帮助中心"查看详细教程；2) 发送邮件至 service@hypermzt.com；3) 在应用内提交反馈；4) 查看我们的在线文档和视频教程。我们的客服团队会在24小时内回复您的问题。
                         </p>
                     </div>
@@ -885,15 +899,15 @@
     <!-- 下载区域 -->
     <section id="download" class="py-36 bg-primary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-white mb-4">立即下载，开启智能翻译</h2>
-            <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-4" data-translate="download.title">立即下载，开启智能翻译</h2>
+            <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto" data-translate="download.subtitle">
                 扫描二维码或点击下载按钮，立即体验Hyper MZT的强大功能
             </p>
             
             <div class="flex justify-center">
                 <div class="text-center">
                     <div class="bg-white p-6 rounded-2xl inline-block shadow-2xl">
-                        <img src="images/qrcode.png" alt="下载二维码" class="w-48 h-48">
+                        <img src="images/qrcode.png" alt="下载二维码" class="w-48 h-48" data-translate-alt="download.qrAlt">
                     </div>
                 </div>
             </div>
@@ -923,38 +937,39 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-4">Hyper MZT</h3>
-                    <p class="text-gray-400 leading-relaxed">
+                    <p class="text-gray-400 leading-relaxed" data-translate="footer.description">
                         专业的AI智能硬件通信中枢，让智能设备更智能。
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">功能特性</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.features">功能特性</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>AI助手</li>
-                        <li>同声传译</li>
-                        <li>视频聊天</li>
-                        <li>会议录音</li>
+                        <li data-translate="footer.featuresList.0">AI助手</li>
+                        <li data-translate="footer.featuresList.1">同声传译</li>
+                        <li data-translate="footer.featuresList.2">视频聊天</li>
+                        <li data-translate="footer.featuresList.3">会议录音</li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">联系我们</h4>
-                    <p class="text-gray-400">
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.contact">联系我们</h4>
+                    <p class="text-gray-400" data-translate="footer.contactDesc">
                         如有问题或建议，欢迎联系我们
                     </p>
                     <p class="text-gray-400 mt-2">
-                        客服邮箱：<a href="mailto:service@hypermzt.com" class="hover:text-purple-400 transition-colors">service@hypermzt.com</a>
+                        <span data-translate="footer.email">客服邮箱：</span><a href="mailto:service@hypermzt.com" class="hover:text-purple-400 transition-colors">service@hypermzt.com</a>
                     </p>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Hyper MZT. 保留所有权利。</p>
+                <p data-translate="footer.copyright">&copy; 2025 Hyper MZT. 保留所有权利。</p>
             </div>
         </div>
     </footer>
 
+    <script src="script/translations.js"></script>
     <script src="script/main.js"></script>
 </body>
 </html>

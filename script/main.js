@@ -1,3 +1,117 @@
+// 语言检测和切换功能
+let currentLanguage = 'zh'; // 默认中文
+
+// 检测浏览器语言
+function detectBrowserLanguage() {
+    const browserLang = navigator.language || navigator.userLanguage;
+    const langCode = browserLang.toLowerCase().split('-')[0];
+    
+    // 如果浏览器语言是英文，设置为英文
+    if (langCode === 'en') {
+        currentLanguage = 'en';
+        return 'en';
+    }
+    
+    // 默认返回中文
+    return 'zh';
+}
+
+// 更新页面内容
+function updatePageContent(lang) {
+    const t = translations[lang];
+    if (!t) return;
+    
+    // 更新页面标题
+    if (t.page && t.page.title) {
+        document.title = t.page.title;
+    }
+    
+    // 更新带有data-translate属性的元素
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        const keys = key.split('.');
+        let value = t;
+        
+        for (const k of keys) {
+            value = value[k];
+            if (!value) break;
+        }
+        
+        if (value) {
+            if (element.tagName === 'INPUT' && element.type === 'placeholder') {
+                element.placeholder = value;
+            } else {
+                element.innerHTML = value;
+            }
+        }
+    });
+    
+    // 更新图片alt属性
+    document.querySelectorAll('[data-translate-alt]').forEach(element => {
+        const key = element.getAttribute('data-translate-alt');
+        const keys = key.split('.');
+        let value = t;
+        
+        for (const k of keys) {
+            value = value[k];
+            if (!value) break;
+        }
+        
+        if (value) {
+            element.alt = value;
+        }
+    });
+}
+
+// 初始化语言
+function initLanguage() {
+    const detectedLang = detectBrowserLanguage();
+    currentLanguage = detectedLang;
+    updatePageContent(detectedLang);
+    
+    // 初始化语言切换按钮
+    initLanguageToggle();
+}
+
+// 初始化语言切换按钮（使用HTML中已存在的按钮）
+function initLanguageToggle() {
+    // 更新桌面端语言切换按钮文本
+    const desktopToggle = document.querySelector('#language-toggle');
+    if (desktopToggle) {
+        const currentLangSpan = desktopToggle.querySelector('#current-lang');
+        if (currentLangSpan) {
+            currentLangSpan.textContent = currentLanguage === 'zh' ? 'EN' : '中文';
+        }
+    }
+    
+    // 更新移动端语言切换按钮文本
+    const mobileToggle = document.querySelector('#mobile-current-lang');
+    if (mobileToggle) {
+        mobileToggle.textContent = currentLanguage === 'zh' ? 'English' : '中文';
+    }
+    
+    // 语言切换事件
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('#language-toggle') || e.target.closest('#mobile-language-toggle')) {
+            const newLang = currentLanguage === 'zh' ? 'en' : 'zh';
+            currentLanguage = newLang;
+            updatePageContent(newLang);
+            
+            // 更新桌面端按钮文本
+            const currentLangSpan = document.querySelector('#current-lang');
+            if (currentLangSpan) {
+                currentLangSpan.textContent = newLang === 'zh' ? 'EN' : '中文';
+            }
+            
+            // 更新移动端按钮文本
+            const mobileCurrentLang = document.querySelector('#mobile-current-lang');
+            if (mobileCurrentLang) {
+                mobileCurrentLang.textContent = newLang === 'zh' ? 'English' : '中文';
+            }
+        }
+    });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -86,6 +200,9 @@ function initScreenshotCarousel() {
 
 // 页面加载完成后初始化轮换功能
 document.addEventListener('DOMContentLoaded', function() {
+    // 初始化语言功能
+    initLanguage();
+    
     initScreenshotCarousel();
     
     // FAQ 交互功能
