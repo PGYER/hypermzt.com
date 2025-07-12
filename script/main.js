@@ -1,5 +1,5 @@
 // 语言检测和切换功能
-let currentLanguage = 'zh'; // 默认中文
+let currentLanguage = 'en'; // 默认英文
 
 // 检测浏览器语言
 function detectBrowserLanguage() {

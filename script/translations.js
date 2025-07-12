@@ -421,15 +421,15 @@ const translations = {
             title: "Why Choose Hyper MZT",
             subtitle: "Professional AI technology and thoughtful user experience for smarter and more efficient communication",
             freeTrial: {
-                title: "Free Trial",
+                title: "Free Trial, Worry-Free Experience",
                 description: "Experience all core features without payment, allowing you to fully understand the product value before making a decision."
             },
             languages: {
-                title: "100+ Languages for Global Communication",
+                title: "100+ Languages, Global Communication",
                 description: "Supports real-time translation in over 100 languages worldwide, enabling barrier-free communication with friends around the world."
             },
             coverage: {
-                title: "Comprehensive Life and Business Scenarios",
+                title: "Full Coverage, Life & Business",
                 description: "Whether daily communication or business meetings, Hyper MZT can provide professional translation services."
             }
         },
@@ -495,4 +495,4 @@ const translations = {
             'screenshot-4c.png': 'screenshot-4c-en.png'
         }
     }
-}; 
+};
