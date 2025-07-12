@@ -57,6 +57,45 @@ function updatePageContent(lang) {
             element.alt = value;
         }
     });
+    
+    // 根据语言切换截图
+    updateScreenshots(lang);
+}
+
+// 根据语言切换截图
+function updateScreenshots(lang) {
+    // 查找所有截图轮播
+    const carousels = document.querySelectorAll('.screenshot-carousel');
+    
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.screenshot-slide');
+        
+        // 定义截图映射
+        const screenshotMap = {
+            zh: {
+                'screenshot-4a.png': 'screenshot-4a.png',
+                'screenshot-4b.png': 'screenshot-4b.png', 
+                'screenshot-4c.png': 'screenshot-4c.png'
+            },
+            en: {
+                'screenshot-4a.png': 'screenshot-4a-en.png',
+                'screenshot-4b.png': 'screenshot-4b-en.png',
+                'screenshot-4c.png': 'screenshot-4c-en.png'
+            }
+        };
+        
+        // 更新每个截图的src
+        slides.forEach(slide => {
+            const currentSrc = slide.src;
+            const fileName = currentSrc.split('/').pop(); // 获取文件名
+            
+            if (screenshotMap[lang] && screenshotMap[lang][fileName]) {
+                const newFileName = screenshotMap[lang][fileName];
+                const newSrc = currentSrc.replace(fileName, newFileName);
+                slide.src = newSrc;
+            }
+        });
+    });
 }
 
 // 初始化语言
