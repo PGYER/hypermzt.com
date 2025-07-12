@@ -263,8 +263,8 @@ const translations = {
         
         // Hero Section
         hero: {
-            title: "Making Smart Devices<br>Smarter is What We Do",
-            description: "Hyper MZT is an AI communication hub application designed for smart devices, featuring simultaneous interpretation, audio/video calls, meeting recording and summarization, and multi-app integration. It provides cross-language, cross-platform efficient communication experience, accessible through various hardware devices such as Bluetooth headphones and smart glasses.",
+            title: "We Make Smart Devices Smarter",
+            description: "Hyper MZT is an AI communication hub for smart devices, offering simultaneous interpretation, audio/video calls, meeting recording, and multi-app integration. Enjoy efficient cross-language communication on devices like Bluetooth headphones and smart glasses.",
             downloadButton: "Download Now",
             tags: {
                 smartTranslation: "Smart Translation",
@@ -476,7 +476,7 @@ const translations = {
             features: "Features",
             featuresList: ["AI Assistant", "Simultaneous Interpretation", "Video Chat", "Meeting Recording"],
             contact: "Contact Us",
-            contactDesc: "If you have questions or suggestions, feel free to contact us",
+            contactDesc: "Feel free to contact us",
             email: "Customer Service Email: ",
             copyright: "© 2025 Hyper MZT. All rights reserved."
         }

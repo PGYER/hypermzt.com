@@ -5,15 +5,11 @@ let currentLanguage = 'zh'; // 默认中文
 function detectBrowserLanguage() {
     const browserLang = navigator.language || navigator.userLanguage;
     const langCode = browserLang.toLowerCase().split('-')[0];
-    
-    // 如果浏览器语言是英文，设置为英文
-    if (langCode === 'en') {
-        currentLanguage = 'en';
-        return 'en';
-    }
-    
-    // 默认返回中文
-    return 'zh';
+
+    console.log('browserLang', browserLang);
+    console.log('langCode', langCode);
+
+    return langCode == 'zh' ? 'zh' : 'en';
 }
 
 // 更新页面内容
