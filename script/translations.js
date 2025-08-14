@@ -23,6 +23,9 @@ const translations = {
         
         // 产品页面翻译
         products: {
+            coreProducts: "核心产品",
+            businessSolutions: "商务解决方案",
+            specializedSolutions: "专业解决方案",
             aiTranslation: "AI翻译",
             realTimeTranslation: "实时翻译",
             voiceTranslator: "即时语音翻译器",
@@ -32,7 +35,6 @@ const translations = {
             businessTranslation: "商务翻译软件",
             travelTranslator: "旅行翻译应用",
             languageLearning: "AI语言学习",
-            specializedSolutions: "专业解决方案",
             education: "教育翻译平台",
             healthcare: "医疗翻译器",
             legal: "法律翻译AI",
@@ -292,6 +294,9 @@ const translations = {
         
         // Product pages translation
         products: {
+            coreProducts: "Core Products",
+            businessSolutions: "Business Solutions",
+            specializedSolutions: "Specialized Solutions",
             aiTranslation: "AI Translation",
             realTimeTranslation: "Real-Time Translation",
             voiceTranslator: "Instant Voice Translator",
@@ -301,7 +306,6 @@ const translations = {
             businessTranslation: "Business Translation Software",
             travelTranslator: "Travel Translator App",
             languageLearning: "AI Language Learning",
-            specializedSolutions: "Specialized Solutions",
             education: "Education Translation Platform",
             healthcare: "Healthcare Translator",
             legal: "Legal Translation AI",
