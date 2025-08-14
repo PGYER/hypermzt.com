@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Team Collaboration - Unite Global Teams | HyperMZT</title>
+    <meta name="description" content="Transform language diversity into team strength with HyperMZT. Enable seamless collaboration across borders, time zones, and languages. Download now for unified global teamwork.">
+    <meta name="keywords" content="international team collaboration, global teams, remote work, multilingual teams, team productivity, cross-border collaboration, workplace communication">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        /* Professional gradient with productivity colors */
+        .hero {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #667eea, #4facfe, #00f2fe, #667eea);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating productivity icons */
+        .productivity-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .icon {
+            position: absolute;
+            font-size: 1.8rem;
+            opacity: 0.12;
+            animation: float 25s infinite linear;
+            color: white;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.12; }
+            90% { opacity: 0.12; }
+            100% { transform: translateY(-100px) translateX(50px) rotate(360deg); opacity: 0; }
+        }
+
+        .icon:nth-child(1) { left: 5%; animation-delay: 0s; }
+        .icon:nth-child(2) { left: 15%; animation-delay: 3s; }
+        .icon:nth-child(3) { left: 25%; animation-delay: 6s; }
+        .icon:nth-child(4) { left: 35%; animation-delay: 9s; }
+        .icon:nth-child(5) { left: 45%; animation-delay: 12s; }
+        .icon:nth-child(6) { left: 55%; animation-delay: 15s; }
+        .icon:nth-child(7) { left: 65%; animation-delay: 18s; }
+        .icon:nth-child(8) { left: 75%; animation-delay: 21s; }
+        .icon:nth-child(9) { left: 85%; animation-delay: 24s; }
+        .icon:nth-child(10) { left: 95%; animation-delay: 27s; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: #1a1a1a;
+            border: none;
+            box-shadow: 0 10px 35px rgba(79, 172, 254, 0.4);
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 45px rgba(79, 172, 254, 0.5);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(15px);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-dark {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .section-light {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .section-productivity {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+        }
+
+        h2 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 3.5rem 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(79, 172, 254, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .feature:hover::before {
+            opacity: 1;
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #667eea, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .feature p {
+            font-size: 1.05rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 5rem 0;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.25);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .productivity-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .productivity-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .productivity-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .productivity-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 2.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a1a1a;
+            font-size: 1.1rem;
+        }
+
+        .faq {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            padding: 2rem;
+            background: #f8fafc;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e2e8f0;
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .faq-answer.active {
+            padding: 2rem;
+            max-height: 250px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(79, 172, 254, 0.15);
+            padding: 1.2rem 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(79, 172, 254, 0.3);
+            font-size: 0.95rem;
+            transition: transform 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 85vh;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .video-container iframe {
+                height: 280px;
+            }
+            
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .workflow-integration {
+            background: linear-gradient(135deg, #667eea 0%, #4facfe 100%);
+            padding: 4rem 2rem;
+            border-radius: 25px;
+            margin: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .integration-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .integration-icon {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .integration-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="productivity-icons">
+            <div class="icon">💼</div>
+            <div class="icon">🌐</div>
+            <div class="icon">⚡</div>
+            <div class="icon">🚀</div>
+            <div class="icon">💬</div>
+            <div class="icon">📊</div>
+            <div class="icon">🎯</div>
+            <div class="icon">🤝</div>
+            <div class="icon">📈</div>
+            <div class="icon">🔗</div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Unite Your Global Team with Seamless Communication</h1>
+                <p>Turn language diversity into team strength. HyperMZT enables flawless collaboration across borders, time zones, and languages. Transform your international workforce into a unified powerhouse.</p>
+                
+                <div class="cta-group">
+                    <a href="https://www.pgyer.com/hyper-mzt" class="cta-primary">Unify Your Team</a>
+                    <a href="#features" class="cta-secondary">See Team Features</a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">89%</div>
+                        <div>Productivity Increase</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15K+</div>
+                        <div>Global Teams</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">47%</div>
+                        <div>Faster Decision Making</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div>Global Collaboration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-light" id="features">
+        <div class="container">
+            <h2>Collaboration Tools Built for Global Success</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Real-Time Team Translation</h3>
+                    <p>Enable instant communication across all languages. Your team messages are translated in real-time, maintaining context and professional tone for seamless collaboration.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Productivity Analytics</h3>
+                    <p>Track communication effectiveness and team collaboration metrics. Identify language barriers and optimize workflows for maximum international team productivity.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Workflow Integration</h3>
+                    <p>Seamlessly integrate with Slack, Teams, Zoom, and other collaboration tools. Transform your existing workflow into a multilingual powerhouse without disruption.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Smart Meeting Assistant</h3>
+                    <p>AI-powered meeting facilitation with automatic translation, sentiment analysis, and action item tracking across all languages for truly inclusive global meetings.</p>
+                </div>
+            </div>
+
+            <div class="workflow-integration">
+                <h3 style="font-size: 2rem; margin-bottom: 1rem;">Integrates With Your Favorite Tools</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Enhance your existing workflow without switching platforms</p>
+                <div class="integration-icons">
+                    <div class="integration-icon">💻 Slack</div>
+                    <div class="integration-icon">📹 Teams</div>
+                    <div class="integration-icon">🎥 Zoom</div>
+                    <div class="integration-icon">📝 Notion</div>
+                    <div class="integration-icon">📊 Asana</div>
+                    <div class="integration-icon">🔗 Trello</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productivity Showcase -->
+    <section class="section section-productivity">
+        <div class="container">
+            <h2>Measurable Impact on Team Performance</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem; opacity: 0.9;">See how HyperMZT transforms international team dynamics and drives results</p>
+            
+            <div class="productivity-showcase">
+                <div class="productivity-card">
+                    <div class="productivity-icon">⚡</div>
+                    <h3>Faster Decision Making</h3>
+                    <p>Eliminate communication delays. Teams make decisions 47% faster when language barriers are removed from the equation.</p>
+                </div>
+                
+                <div class="productivity-card">
+                    <div class="productivity-icon">🎯</div>
+                    <h3>Higher Project Success</h3>
+                    <p>92% of projects meet deadlines when teams can communicate clearly across languages and cultural contexts.</p>
+                </div>
+                
+                <div class="productivity-card">
+                    <div class="productivity-icon">💡</div>
+                    <h3>Enhanced Innovation</h3>
+                    <p>Diverse perspectives drive 73% more innovative solutions when everyone can contribute meaningfully to discussions.</p>
+                </div>
+                
+                <div class="productivity-card">
+                    <div class="productivity-icon">🤝</div>
+                    <h3>Stronger Team Bonds</h3>
+                    <p>Build trust and camaraderie across cultures. Teams report 84% better relationships when communication flows freely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2>Watch Your Team Transform</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem; opacity: 0.9;">See how international teams collaborate effortlessly with HyperMZT's intelligent translation and cultural adaptation.</p>
+            
+            <div class="video-section">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9I9iu_Wy10g?si=ZR2gY-dweefr45gP" title="HyperMZT International Team Collaboration Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-text">"Our distributed team across 12 countries now collaborates like they're in the same room. HyperMZT eliminated the language friction that was slowing us down."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SL</div>
+                        <div>
+                            <div style="font-weight: bold;">Sarah Liu</div>
+                            <div style="opacity: 0.8;">VP of Global Operations, TechCorp</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">"Project delivery improved by 47% once we implemented HyperMZT. Our international stakeholders finally feel heard and understood in every meeting."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div>
+                            <div style="font-weight: bold;">Marcus König</div>
+                            <div style="opacity: 0.8;">Head of Product, InnovateGlobal</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">"The cultural context features are game-changing. Our diverse team now navigates sensitive discussions with confidence and mutual respect."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PR</div>
+                        <div>
+                            <div style="font-weight: bold;">Priya Raj</div>
+                            <div style="opacity: 0.8;">Director of People & Culture, GlobalTech</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://www.pgyer.com/hyper-mzt" class="cta-primary">Start Unifying Your Team Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>Team Leaders Ask</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How quickly can we integrate HyperMZT into our workflow?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Integration takes less than 15 minutes. HyperMZT works with your existing tools like Slack, Teams, and Zoom. Your team can start collaborating seamlessly immediately after setup.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Does HyperMZT work for technical discussions and jargon?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. Our AI is trained on technical vocabularies across industries including software, engineering, finance, and healthcare. It maintains accuracy even with specialized terminology.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How secure is our team communication data?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Enterprise-grade security with end-to-end encryption, SOC 2 compliance, and GDPR adherence. Your team communications remain private and secure at all times.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can we track team collaboration improvements?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! HyperMZT provides detailed analytics on communication patterns, response times, meeting effectiveness, and collaboration metrics to help optimize your team's performance.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What if team members prefer different communication styles?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        HyperMZT adapts to individual preferences and cultural communication styles. It can adjust formality, directness, and tone to match each team member's preferred approach.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="trust-badges">
+                <div class="badge">🔒 Enterprise Security</div>
+                <div class="badge">⚡ 99.9% Uptime</div>
+                <div class="badge">🏆 SOC 2 Certified</div>
+                <div class="badge">⭐ 4.9/5 Team Rating</div>
+            </div>
+            
+            <div class="footer-content">
+                <div>
+                    <h3>HyperMZT for Teams</h3>
+                    <p>Empowering global teams to collaborate without limits. Transform language diversity into competitive advantage with intelligent, context-aware communication.</p>
+                </div>
+                <div>
+                    <h4>Enterprise Solutions</h4>
+                    <p><a href="https://hypermzt.com/" style="color: #64b5f6; text-decoration: none;">Enterprise Plans</a></p>
+                    <p><a href="https://www.pgyer.com/hyper-mzt" style="color: #4facfe; text-decoration: none;">Download for Teams</a></p>
+                    <p>Custom Integrations</p>
+                </div>
+                <div>
+                    <h4>Support & Training</h4>
+                    <p>24/7 Technical Support</p>
+                    <p>Team Onboarding</p>
+                    <p>Success Manager</p>
+                    <p>Training Resources</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: 2rem; border-top: 1px solid #333; margin-top: 2rem; opacity: 0.7;">
+                <p>&copy; 2025 HyperMZT. Uniting teams, amplifying success. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('span');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList

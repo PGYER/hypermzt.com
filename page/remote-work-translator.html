@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Work Translator - Global Remote Team Success | HyperMZT</title>
+    <meta name="description" content="Make remote work truly global with HyperMZT. Break language barriers for distributed teams worldwide. Download now to enable seamless communication across borders and time zones.">
+    <meta name="keywords" content="remote work translator, distributed teams, work from home, global remote work, virtual team communication, remote collaboration, digital nomad, multilingual remote work">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        /* Remote work gradient with modern aesthetics */
+        .hero {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #4facfe, #00f2fe, #667eea, #4facfe);
+            background-size: 400% 400%;
+            animation: gradientShift 18s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating remote work icons */
+        .remote-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .icon {
+            position: absolute;
+            font-size: 2.2rem;
+            opacity: 0.1;
+            animation: float 22s infinite linear;
+            color: white;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(-20px) rotate(0deg); opacity: 0; }
+            15% { opacity: 0.1; }
+            85% { opacity: 0.1; }
+            100% { transform: translateY(-100px) translateX(40px) rotate(360deg); opacity: 0; }
+        }
+
+        .icon:nth-child(1) { left: 8%; animation-delay: 0s; }
+        .icon:nth-child(2) { left: 18%; animation-delay: 2.5s; }
+        .icon:nth-child(3) { left: 28%; animation-delay: 5s; }
+        .icon:nth-child(4) { left: 38%; animation-delay: 7.5s; }
+        .icon:nth-child(5) { left: 48%; animation-delay: 10s; }
+        .icon:nth-child(6) { left: 58%; animation-delay: 12.5s; }
+        .icon:nth-child(7) { left: 68%; animation-delay: 15s; }
+        .icon:nth-child(8) { left: 78%; animation-delay: 17.5s; }
+        .icon:nth-child(9) { left: 88%; animation-delay: 20s; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 1.3rem 3.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            color: #1a1a1a;
+            border: none;
+            box-shadow: 0 12px 40px rgba(255, 107, 107, 0.4);
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 50px rgba(255, 107, 107, 0.5);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(20px);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 3rem 2rem;
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-dark {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+        }
+
+        .section-light {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .section-workspace {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        h2 {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3.5rem;
+            margin-top: 4rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 4rem 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 107, 107, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .feature:hover::before {
+            opacity: 1;
+            animation: shimmer 1.5s ease-in-out;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 2.5rem;
+            background: linear-gradient(45deg, #667eea, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+        }
+
+        .feature p {
+            font-size: 1.1rem;
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .workspace-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .workspace-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3.5rem 2.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .workspace-card:hover {
+            transform: translateY(-12px);
+        }
+
+        .workspace-icon {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .video-section {
+            text-align: center;
+            margin: 5rem 0;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 950px;
+            margin: 0 auto;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.3);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 530px;
+            border: none;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 3rem 2.5rem;
+            border-radius: 25px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-8px);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a1a1a;
+            font-size: 1.2rem;
+        }
+
+        .remote-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #667eea, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .faq {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            padding: 2.5rem;
+            background: #f8fafc;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.15rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e2e8f0;
+        }
+
+        .faq-answer {
+            padding: 0 2.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .faq-answer.active {
+            padding: 2.5rem;
+            max-height: 300px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 107, 107, 0.15);
+            padding: 1.5rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 90vh;
+            }
+            
+            .cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .video-container iframe {
+                height: 300px;
+            }
+            
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .time-zone-visual {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 4rem 2rem;
+            border-radius: 30px;
+            margin: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .time-zones {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .time-zone {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .time-zone:hover {
+            transform: scale(1.05);
+        }
+
+        .time-zone-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="remote-icons">
+            <div class="icon">💻</div>
+            <div class="icon">🏠</div>
+            <div class="icon">🌍</div>
+            <div class="icon">☕</div>
+            <div class="icon">📱</div>
+            <div class="icon">🎧</div>
+            <div class="icon">📊</div>
+            <div class="icon">🚀</div>
+            <div class="icon">⚡</div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1>Work Without Borders</h1>
+                <p>Make remote work truly global with HyperMZT. Break down language barriers for distributed teams worldwide. Transform your home office into a global collaboration hub with intelligent, real-time translation.</p>
+                
+                <div class="cta-group">
+                    <a href="https://www.pgyer.com/hyper-mzt" class="cta-primary">Work Without Borders</a>
+                    <a href="#features" class="cta-secondary">Remote Features</a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">250K+</div>
+                        <div>Remote Workers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">78%</div>
+                        <div>Productivity Boost</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">120+</div>
+                        <div>Countries Connected</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div>Global Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section section-light" id="features">
+        <div class="container">
+            <h2>Remote Work Tools for Global Success</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Home Office Translator</h3>
+                    <p>Transform your home workspace into a global communication hub. Instant translation for video calls, emails, and messages keeps you connected with colleagues worldwide, no matter the language.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Async Communication</h3>
+                    <p>Perfect for distributed teams across time zones. Leave translated voice messages, documents, and updates that team members can understand perfectly when they come online, maintaining productivity flow.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Meeting Integration</h3>
+                    <p>Seamlessly integrate with Zoom, Teams, and Google Meet. Real-time subtitles and translation ensure everyone participates fully in meetings, regardless of their native language.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📋</div>
+                    <h3>Document Collaboration</h3>
+                    <p>Collaborate on shared documents in real-time with automatic translation. Comments, suggestions, and edits are instantly translated, making global document collaboration effortless.</p>
+                </div>
+            </div>
+
+            <div class="time-zone-visual">
+                <h3 style="font-size: 2.2rem; margin-bottom: 1rem;">Connect Across Every Time Zone</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Your team never sleeps, and neither does communication</p>
+                <div class="time-zones">
+                    <div class="time-zone">
+                        <div class="time-zone-icon">🏙️</div>
+                        <div><strong>New York</strong></div>
+                        <div style="opacity: 0.8;">9:00 AM</div>
+                    </div>
+                    <div class="time-zone">
+                        <div class="time-zone-icon">🗼</div>
+                        <div><strong>London</strong></div>
+                        <div style="opacity: 0.8;">2:00 PM</div>
+                    </div>
+                    <div class="time-zone">
+                        <div class="time-zone-icon">🏯</div>
+                        <div><strong>Tokyo</strong></div>
+                        <div style="opacity: 0.8;">11:00 PM</div>
+                    </div>
+                    <div class="time-zone">
+                        <div class="time-zone-icon">🌉</div>
+                        <div><strong>Sydney</strong></div>
+                        <div style="opacity: 0.8;">1:00 AM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Remote Benefits -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>Why Remote Teams Choose HyperMZT</h2>
+            
+            <div class="remote-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Cost Effective</h3>
+                    <p>Save 60% on international hiring costs by accessing global talent without language barriers limiting your choices.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Higher Productivity</h3>
+                    <p>Remote teams report 78% higher productivity when communication flows seamlessly across languages and cultures.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Better Talent Access</h3>
+                    <p>Hire the best talent globally, not just locally. Language barriers no longer limit your team's potential.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚖️</div>
+                    <h3>Work-Life Balance</h3>
+                    <p>Reduce miscommunication stress. Clear, accurate translation means less time clarifying and more time for what matters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workspace Showcase -->
+    <section class="section section-workspace">
+        <div class="container">
+            <h2>Your Home Office, Globally Connected</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem; opacity: 0.9;">See how remote workers worldwide are breaking language barriers from their home offices</p>
+            
+            <div class="workspace-showcase">
+                <div class="workspace-card">
+                    <div class="workspace-icon">🏔️</div>
+                    <h3>Mountain Cabin</h3>
+                    <p>Work from anywhere while staying connected to your global team. Translation that works even with spotty internet.</p>
+                </div>
+                
+                <div class="workspace-card">
+                    <div class="workspace-icon">🏖️</div>
+                    <h3>Beach Office</h3>
+                    <p>Digital nomads love our mobile-first design. Translate on-the-go without missing important team communications.</p>
+                </div>
+                
+                <div class="workspace-card">
+                    <div class="workspace-icon">🏙️</div>
+                    <h3>City Apartment</h3>
+                    <p>Urban remote workers appreciate our noise-canceling audio translation and clear video call integration.</p>
+                </div>
+                
+                <div class="workspace-card">
+                    <div class="workspace-icon">🌾</div>
+                    <h3>Rural Setup</h3>
+                    <p>Low-bandwidth optimized translation ensures rural remote workers never miss important team updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2>See Remote Translation in Action</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem; opacity: 0.9;">Watch how HyperMZT transforms home offices worldwide into globally connected workspaces.</p>
+            
+            <div class="video-section">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9I9iu_Wy10g?si=ZR2gY-dweefr45gP" title="HyperMZT Remote Work Translation Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-text">"Working from my home in Brazil while collaborating with teams in Japan and Germany was impossible before HyperMZT. Now it's seamless every day."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CS</div>
+                        <div>
+                            <div style="font-weight: bold;">Carlos Silva</div>
+                            <div style="opacity: 0.8;">Remote Software Engineer</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">"As a digital nomad, I've worked from 15 countries this year. HyperMZT keeps me connected to my team no matter where my home office is today."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EM</div>
+                        <div>
+                            <div style="font-weight: bold;">Emma Martinez</div>
+                            <div style="opacity: 0.8;">Digital Marketing Nomad</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">"Managing a remote team across 8 countries became effortless. Everyone feels heard and understood in meetings, regardless of their English level."</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div>
+                            <div style="font-weight: bold;">David Kim</div>
+                            <div style="opacity: 0.8;">Remote Team Manager</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://www.pgyer.com/hyper-mzt" class="cta-primary">Start Working Without Borders</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>Remote Workers Ask</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Does HyperMZT work with video call platforms like Zoom and Teams?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! HyperMZT integrates seamlessly with Zoom, Microsoft Teams, Google Meet, and Skype. Get real-time subtitles and translation during video calls without any additional setup.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can I use HyperMZT with slow internet connections?
+                        <span>▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. HyperMZT is optimized for low-bandwidth environments. It works reliably even with spotty internet connections common in remote locations and rural areas.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How does async translation work for different time zones?
+                        <span>▼</span>
+                    </div>
