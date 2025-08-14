@@ -40,7 +40,13 @@ const translations = {
             legal: "法律翻译AI",
             customerService: "客服翻译",
             tourism: "旅游翻译解决方案",
-            professional: "专业版"
+            professional: "专业版",
+            aiCommunicationHub: "AI沟通中心",
+            iotTranslation: "物联网翻译平台", 
+            wearableTranslator: "可穿戴设备翻译器",
+            crossCultural: "跨文化沟通",
+            teamCollaboration: "国际团队协作",
+            remoteWork: "远程工作翻译器"
         },
         
         // 英雄区域
@@ -311,7 +317,13 @@ const translations = {
             legal: "Legal Translation AI",
             customerService: "Customer Service Translation",
             tourism: "Tourism Translation Solution",
-            professional: "Professional Version"
+            professional: "Professional Version",
+            aiCommunicationHub: "AI Communication Hub",
+            iotTranslation: "IoT Translation Platform",
+            wearableTranslator: "Wearable Device Translator", 
+            crossCultural: "Cross-Cultural Communication",
+            teamCollaboration: "International Team Collaboration",
+            remoteWork: "Remote Work Translator"
         },
         
         // Hero Section
