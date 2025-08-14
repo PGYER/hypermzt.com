@@ -261,6 +261,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
     
+    // 移动端产品子菜单控制
+    const mobileProductsToggle = document.querySelector('.mobile-products-toggle');
+    const mobileProductsSubmenu = document.querySelector('.mobile-products-submenu');
+    const mobileProductsArrow = document.querySelector('.mobile-products-arrow');
+    
+    if (mobileProductsToggle && mobileProductsSubmenu && mobileProductsArrow) {
+        mobileProductsToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (mobileProductsSubmenu.classList.contains('hidden')) {
+                // 展开子菜单
+                mobileProductsSubmenu.classList.remove('hidden');
+                mobileProductsArrow.style.transform = 'rotate(180deg)';
+            } else {
+                // 收起子菜单
+                mobileProductsSubmenu.classList.add('hidden');
+                mobileProductsArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+    
     // 打开菜单
     function openMobileMenu() {
         mobileMenu.classList.add('open');
@@ -282,9 +304,16 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuClose.addEventListener('click', closeMobileMenu);
     mobileMenuOverlay.addEventListener('click', closeMobileMenu);
     
-    // 点击菜单项时关闭菜单
+    // 点击菜单项时关闭菜单（但排除产品子菜单的toggle按钮）
     mobileMenuItems.forEach(item => {
-        item.addEventListener('click', closeMobileMenu);
+        item.addEventListener('click', function(e) {
+            // 如果点击的是产品子菜单的toggle按钮，不关闭菜单
+            if (e.target.closest('.mobile-products-toggle')) {
+                return;
+            }
+            // 如果是子菜单项，关闭菜单
+            closeMobileMenu();
+        });
     });
     
     // ESC键关闭菜单

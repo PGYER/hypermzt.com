@@ -14,10 +14,31 @@ const translations = {
         // 导航栏
         nav: {
             features: "功能特性",
+            products: "产品页面",
             scenarios: "使用场景", 
             advantages: "产品优势",
             faq: "常见问题",
             download: "立即下载"
+        },
+        
+        // 产品页面翻译
+        products: {
+            aiTranslation: "AI翻译",
+            realTimeTranslation: "实时翻译",
+            voiceTranslator: "即时语音翻译器",
+            voiceTranslationSoftware: "语音翻译软件",
+            smartGlasses: "智能眼镜翻译器",
+            meetingTranslation: "会议翻译",
+            businessTranslation: "商务翻译软件",
+            travelTranslator: "旅行翻译应用",
+            languageLearning: "AI语言学习",
+            specializedSolutions: "专业解决方案",
+            education: "教育翻译平台",
+            healthcare: "医疗翻译器",
+            legal: "法律翻译AI",
+            customerService: "客服翻译",
+            tourism: "旅游翻译解决方案",
+            professional: "专业版"
         },
         
         // 英雄区域
@@ -262,10 +283,31 @@ const translations = {
         // Navigation
         nav: {
             features: "Features",
+            products: "Products",
             scenarios: "Use Cases", 
             advantages: "Advantages",
             faq: "FAQ",
             download: "Download"
+        },
+        
+        // Product pages translation
+        products: {
+            aiTranslation: "AI Translation",
+            realTimeTranslation: "Real-Time Translation",
+            voiceTranslator: "Instant Voice Translator",
+            voiceTranslationSoftware: "Voice Translation Software",
+            smartGlasses: "Smart Glasses Translator",
+            meetingTranslation: "Meeting Translation",
+            businessTranslation: "Business Translation Software",
+            travelTranslator: "Travel Translator App",
+            languageLearning: "AI Language Learning",
+            specializedSolutions: "Specialized Solutions",
+            education: "Education Translation Platform",
+            healthcare: "Healthcare Translator",
+            legal: "Legal Translation AI",
+            customerService: "Customer Service Translation",
+            tourism: "Tourism Translation Solution",
+            professional: "Professional Version"
         },
         
         // Hero Section
