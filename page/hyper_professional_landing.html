@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Interpretation Service - Hyper Expert Translation | Enterprise-Grade AI Translation Solutions</title>
+    <meta name="description" content="Professional AI interpretation service trusted by enterprises worldwide. Expert translation in 70+ languages with smart device integration. Get professional-grade accuracy for your business.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e2e8f0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+            color: white;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="%23ffffff08" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.2s forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-feature-icon {
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.8s forwards;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 36px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-visual {
+            position: relative;
+            opacity: 0;
+            transform: translateX(30px);
+            animation: fadeInRight 1s ease 0.4s forwards;
+        }
+
+        .professional-mockup {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .mockup-header {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .mockup-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ef4444;
+        }
+
+        .mockup-dot:nth-child(2) { background: #f59e0b; }
+        .mockup-dot:nth-child(3) { background: #10b981; }
+
+        .mockup-content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            color: #1f2937;
+        }
+
+        .translation-demo {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .demo-message {
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .demo-message.input {
+            background: #f3f4f6;
+            align-self: flex-start;
+            max-width: 80%;
+        }
+
+        .demo-message.output {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            align-self: flex-end;
+            max-width: 80%;
+        }
+
+        .demo-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+
+        /* Trust Badges */
+        .trust-section {
+            background: white;
+            padding: 80px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .trust-content {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .trust-title {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+
+        .trust-logo {
+            height: 40px;
+            background: #9ca3af;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            border-color: #d1d5db;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-highlight {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #0c4a6e;
+            font-weight: 500;
+        }
+
+        /* Use Cases */
+        .use-cases {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 100px 0;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .use-case {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .use-case:hover {
+            transform: translateY(-5px);
+        }
+
+        .use-case-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #059669, #10b981);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .use-case h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .use-case p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e293b, #475569);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="300" fill="%23ffffff03"/><circle cx="800" cy="800" r="400" fill="%23ffffff02"/></svg>');
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: #9ca3af;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #3b82f6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #475569;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <div class="logo-icon">H</div>
+                <span class="logo-text">Hyper Expert</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#use-cases">Solutions</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="https://pgyer.com/apk/apk/com.pgyer.aiot.hyper" class="nav-cta" target="_blank">Get Expert Translation</a></li>
+            </ul>
+            <button class="mobile-menu-button">☰</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Professional AI Interpretation Service</h1>
+                    <p class="hero-subtitle">Enterprise-grade translation accuracy trusted by Fortune 500 companies. Expert-level AI interpretation in 70+ languages with smart device integration.</p>
+                    
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">✓</span>
+                            <span>99.9% Accuracy</span>
+                        </div>
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">✓</span>
+                            <span>Enterprise Security</span>
+                        </div>
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">✓</span>
+                            <span>24/7 Professional Support</span>
+                        </div>
+                        <div class="hero-feature">
+                            <span class="hero-feature-icon">✓</span>
+                            <span>Smart Device Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="https://pgyer.com/apk/apk/com.pgyer.aiot.hyper" class="cta-primary" target="_blank">
+                            <span>Get Expert Translation</span>
+                            <span>→</span>
+                        </a>
+                        <a href="#demo" class="cta-secondary">
+                            <span>📹 Watch Demo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="professional-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="translation-demo">
+                                <div class="demo-message input">
+                                    <div class="demo-label">Input (English)</div>
+                                    <div>"We need to finalize the merger agreement by tomorrow."</div>
+                                </div>
+                                <div class="demo-message output">
+                                    <div class="demo-label">Professional Translation (Mandarin)</div>
+                                    <div>"我们需要在明天之前完成合并协议的最终确定。"</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-content">
+                <p class="trust-title">Trusted by leading organizations worldwide</p>
+                <div class="trust-logos">
+                    <div class="trust-logo">Fortune 500</div>
+                    <div class="trust-logo">Global Corp</div>
+                    <div class="trust-logo">Enterprise Inc</div>
+                    <div class="trust-logo">International Ltd</div>
+                    <div class="trust-logo">World Trade Co</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Enterprise-Grade Translation Features</h2>
+                <p class="section-subtitle">Professional AI interpretation service designed for business-critical communications with unmatched accuracy and reliability.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Expert-Level Accuracy</h3>
+                    <p>Our professional AI achieves 99.9% translation accuracy with context-aware interpretation, trained on millions of business documents and conversations.</p>
+                    <div class="feature-highlight">
+                        <strong>Professional Grade:</strong> Certified for legal, medical, and technical translations
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏢</div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-grade encryption and compliance with GDPR, HIPAA, and SOC 2 standards. Your sensitive business communications remain completely confidential.</p>
+                    <div class="feature-highlight">
+                        <strong>Security Features:</strong> End-to-end encryption, zero data retention, audit logs
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-Time Professional Service</h3>
+                    <p>Instant professional interpretation with smart glasses integration. Perfect for high-stakes business meetings, negotiations, and international conferences.</p>
+                    <div class="feature-highlight">
+                        <strong>Voice Activation:</strong> "Hello Hyper" for instant professional translation
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>70+ Professional Languages</h3>
+                    <p>Complete coverage of global business languages with industry-specific terminology. From major world languages to specialized regional dialects.</p>
+                    <div class="feature-highlight">
+                        <strong>Specialized Domains:</strong> Legal, Medical, Technical, Financial translations
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Smart Meeting Integration</h3>
+                    <p>AI-powered meeting assistant with automatic speaker identification, professional transcription, and instant meeting minutes generation.</p>
+                    <div class="feature-highlight">
+                        <strong>Meeting Features:</strong> Multi-speaker detection, role-based translations, export options
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Cross-Platform Professional Calls</h3>
+                    <p>Professional video call translation across all platforms. Both parties get expert-level translation without requiring app installation.</p>
+                    <div class="feature-highlight">
+                        <strong>Platform Support:</strong> Zoom, Teams, Google Meet, WebEx compatibility
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="use-cases" id="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Use Cases</h2>
+                <p class="section-subtitle">Trusted by professionals across industries for mission-critical communication needs</p>
+            </div>
+
+            <div class="use-cases-grid">
+                <div class="use-case">
+                    <div class="use-case-icon">⚖️</div>
+                    <h3>Legal & Compliance</h3>
+                    <p>Professional legal interpretation for contracts, depositions, and international legal proceedings with certified accuracy.</p>
+                </div>
+
+                <div class="use-case">
+                    <div class="use-case-icon">🏥</div>
+                    <h3>Medical & Healthcare</h3>
+                    <p>HIPAA-compliant medical translation for patient consultations, medical conferences, and healthcare communications.</p>
+                </div>
+
+                <div class="use-case">
+                    <div class="use-case-icon">💼</div>
+                    <h3>Corporate Meetings</h3>
+                    <p>Executive-level interpretation for board meetings, M&A negotiations, and international business partnerships.</p>
+                </div>
+
+                <div class="use-case">
+                    <div class="use-case-icon">🏛️</div>
+                    <h3>Government & Diplomacy</h3>
+                    <p>Professional diplomatic interpretation for government meetings, trade negotiations, and international relations.</p>
+                </div>
+
+                <div class="use-case">
+                    <div class="use-case-icon">🎓</div>
+                    <h3>Academic & Research</h3>
+                    <p>Scholarly translation for research collaborations, international conferences, and academic publications.</p>
+                </div>
+
+                <div class="use-case">
+                    <div class="use-case-icon">🌍</div>
+                    <h3>International Trade</h3>
+                    <p>Professional business interpretation for trade negotiations, supply chain communications, and global partnerships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="pricing">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Professional-Grade Translation?</h2>
+                <p>Join thousands of professionals who trust Hyper Expert Translation for their most critical business communications. Experience the difference of true AI expertise.</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://pgyer.com/apk/apk/com.pgyer.aiot.hyper" class="cta-primary" target="_blank">
+                        <span>Get Expert Translation</span>
+                        <span>→</span>
+                    </a>
+                    <a href="#contact" class="cta-secondary">
+                        <span>📞 Contact Sales</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#api">API</a>
+                    <a href="#integrations">Integrations</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <a href="#enterprise">Enterprise</a>
+                    <a href="#healthcare">Healthcare</a>
+                    <a href="#legal">Legal</a>
+                    <a href="#government">Government</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#help">Help Center</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#security">Security</a>
+                    <a href="#compliance">Compliance</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4

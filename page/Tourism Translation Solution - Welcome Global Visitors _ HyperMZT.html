@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create memorable experiences for international tourists with HyperMZT's Tourism Translation Solution. Instant translation for hospitality.">
+    <title>Tourism Translation Solution - Welcome Global Visitors | HyperMZT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1A73E8; /* Vibrant Blue */
+            --secondary: #34A853; /* Green */
+            --accent: #FBBC05; /* Yellow */
+            --light: #f8f9fa;
+            --dark: #202124;
+            --text: #5f6368;
+            --background: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --gradient-start: #4285F4;
+            --gradient-end: #34A853;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            background-color: var(--background);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.7em;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(52, 168, 83, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px 0 rgba(52, 168, 83, 0.6);
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: linear-gradient(120deg, #e0f7fa, #c8e6c9);
+            color: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+             content: "";
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             /* Simple pattern for landmarks */
+             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect x="10" y="30" width="10" height="40" fill="%231A73E8" opacity="0.1"/><circle cx="20" cy="20" r="5" fill="%23FBBC05" opacity="0.1"/><rect x="40" y="20" width="20" height="50" fill="%2334A853" opacity="0.1"/><circle cx="50" cy="10" r="7" fill="%231A73E8" opacity="0.1"/><rect x="70" y="40" width="15" height="30" fill="%23FBBC05" opacity="0.1"/></svg>');
+             background-size: 200px;
+             opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+            color: inherit;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: var(--background);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Use Cases */
+        .use-cases {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .case-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .case-card:hover {
+             transform: translateY(-5px);
+        }
+
+        .case-img {
+            height: 200px;
+            background-color: #d1e7dd; /* Placeholder color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 4rem;
+        }
+
+        .case-content {
+            padding: 25px;
+        }
+
+        .case-content h3 {
+            margin-bottom: 15px;
+        }
+
+        /* Instant Demo */
+        .instant-demo {
+            padding: 100px 0;
+            background-color: var(--background);
+            text-align: center;
+        }
+
+        .demo-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            text-align: left;
+        }
+
+        .demo-header {
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .demo-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .demo-content {
+                flex-direction: column;
+            }
+        }
+
+        .input-area, .output-area {
+            flex: 1;
+            padding: 15px;
+        }
+
+        .input-area {
+            border-right: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .input-area {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: 'Open Sans', sans-serif;
+            resize: vertical;
+        }
+
+        .language-selector {
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-selector select {
+            padding: 8px 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .swap-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .translate-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .translate-btn:hover {
+            background-color: #0d6efd;
+        }
+
+         /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--background);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+            position: relative;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--secondary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            margin-right: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(120deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .cta h2 {
+            color: inherit;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background-color: var(--background);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px var(--shadow);
+            background-color: var(--card-bg);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: var(--card-bg);
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--dark);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 160px 0 80px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Hyper<span>MZT</span> Tourism</a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#demo">Live Demo</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Tourism Translation Solution - Welcome Global Visitors</h1>
+            <p>Create memorable experiences for international tourists. Instant translation for hospitality.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn btn-primary">Enhance Visitor Experience</a>
+                <a href="#demo" class="btn" style="background-color: rgba(255,255,255,0.5); color: var(--dark); border: 1px solid rgba(0,0,0,0.1);">Try Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Designed for the Tourism Industry</h2>
+                <p>Break language barriers and connect with visitors from around the world.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Real-Time Chat</h3>
+                    <p>Enable instant, accurate translation in live chat between staff and guests.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sign"></i>
+                    </div>
+                    <h3>Signage & Menus</h3>
+                    <p>Translate static and digital signs, menus, and brochures with a click.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Voice Assistance</h3>
+                    <p>Provide spoken translation for tours, directions, and guest inquiries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Multi-Language</h3>
+                    <p>Support for 100+ languages and dialects, including regional variations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <div class="section-title">
+                <h2>Transforming Visitor Experiences</h2>
+                <p>See how our solution integrates seamlessly into your operations.</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="case-card">
+                    <div class="case-img">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Hotels & Resorts</h3>
+                        <p>Enhance guest services with translated check-in processes, concierge assistance, and multilingual staff communication tools.</p>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-img">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Restaurants & Cafes</h3>
+                        <p>Instantly translate menus, take orders, and provide exceptional dining experiences for international guests.</p>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-img">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="case-content">
+                        <h3>Museums & Attractions</h3>
+                        <p>Offer personalized, translated tours and interactive exhibits to engage visitors from all over the globe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instant Demo Section -->
+    <section id="demo" class="instant-demo">
+        <div class="container">
+            <h2>Experience Instant Translation</h2>
+            <p>Type or paste text below and see the magic happen.</p>
+            <div class="demo-container">
+                <div class="demo-header">
+                    <h3>Live Translation Demo</h3>
+                </div>
+                <div class="demo-content">
+                    <div class="input-area">
+                        <h4>Input Text (English)</h4>
+                        <textarea id="inputText" placeholder="Hello! Welcome to our hotel. How can I assist you today?">Hello! Welcome to our hotel. How can I assist you today?</textarea>
+                        <div class="language-selector">
+                            <span>Translate to:</span>
+                            <select id="targetLanguage">
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="de">German</option>
+                                <option value="ja">Japanese</option>
+                                <option value="zh">Chinese (Simplified)</option>
+                                <option value="ar">Arabic</option>
+                            </select>
+                        </div>
+                        <button class="translate-btn" onclick="translateText()">Translate</button>
+                    </div>
+                    <div class="output-area">
+                        <h4>Translated Text</h4>
+                        <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+                        <div class="language-selector">
+                            <span>Detected Language:</span>
+                            <span id="detectedLang">English</span>
+                        </div>
+                        <button class="translate-btn" style="background-color: var(--secondary);" onclick="copyToClipboard()">Copy Translation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Loved by Tourism Professionals</h2>
+                <p>Hear from hotels, restaurants, and attractions worldwide.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Since implementing HyperMZT, our international guest satisfaction scores have skyrocketed. Communication is no longer a barrier, and our staff feels more confident serving a diverse clientele.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S. M.</div>
+                        <div class="author-info">
+                            <h4>Sarah Miller</h4>
+                            <p>Guest Services Manager, Grand Vista Hotel, London</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Our restaurant used to lose business because we couldn't effectively communicate with non-English speaking customers. HyperMZT's menu translation and order-taking feature changed everything. Revenue is up 20%!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P. D.</div>
+                        <div class="author-info">
+                            <h4>Pierre Dubois</h4>
+                            <p>Owner, Le Petit Bistro, Paris</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Managing a large museum with visitors from 150+ countries is complex. HyperMZT's real-time tour translation has made our exhibits accessible to everyone, enriching the visitor experience immeasurably.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">Y. T.</div>
+                        <div class="author-info">
+                            <h4>Yuki Tanaka</h4>
+                            <p>Director of Visitor Experience, Tokyo National Museum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Start Welcoming the World Today</h2>
+            <p>Break down language barriers and create unforgettable experiences for every guest.</p>
+            <a href="#" class="btn btn-primary">Enhance Visitor Experience</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Your questions about our tourism translation platform.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How quickly does the translation happen? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Translations are near-instantaneous, typically taking less than a second for short phrases and a few seconds for longer passages, ensuring smooth real-time communication.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can it work offline? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our solution offers offline capabilities for core languages. This is particularly useful for attractions or areas with limited internet connectivity. Offline packs need to be downloaded in advance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is it easy to integrate into our existing systems (PMS, POS)? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We provide simple APIs and plugins for popular Property Management Systems (PMS) and Point of Sale (POS) systems, making integration quick and hassle-free for your IT team.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is the translation for colloquialisms or local slang? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI is trained on a diverse range of data, including travel guides, reviews, and social media from various regions. It excels at understanding and translating colloquialisms and local expressions into appropriate equivalents in the target language.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>HyperMZT Tourism</h3>
+                    <p>Bridging cultures through seamless communication.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#use-cases">Use Cases</a></li>
+                        <li><a href="#demo">Live Demo</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Integration Guides</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Language Support List</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> tourism@hypermzt.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Global Tourism Team</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HyperMZT. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Simple translation logic for demo purposes
+        function translateText() {
+            const inputText = document.getElementById('inputText').value;
+            const targetLang = document.getElementById('targetLanguage').value;
+            const outputArea = document.getElementById('outputText');
+            const detectedLangArea = document.getElementById('detectedLang');
+
+            // In a real app, this would be an API call
+            // For demo, we just simulate a translation
+            let translatedText = "";
+            switch(targetLang) {
+                case 'es':
+                    translatedText = "¡Hola! Bienvenido a nuestro hotel. ¿Cómo puedo ayudarte hoy?";
+                    break;
+                case 'fr':
+                    translatedText = "Bonjour ! Bienvenue dans notre hôtel. Comment puis-je vous aider aujourd'hui ?";
+                    break;
+                case 'de':
+                    translatedText = "Hallo! Willkommen in unserem Hotel. Wie kann ich Ihnen heute helfen?";
+                    break;
+                case 'ja':
+                    translatedText = "こんにちは！ 当ホテルへようこそ。 本日はどのようなご用件でしょうか？";
+                    break;
+                case 'zh':
+                    translatedText = "您好！欢迎光临我们酒店。今天我怎样帮助您？";
+                    break;
+                case 'ar':
+                    translatedText = "مرحبا! أهلا بك في فندقنا. كيف يمكنني مساعدتك اليوم؟";
+                    break;
+                default:
+                    translatedText = inputText;
+            }
+
+            outputArea.value = translatedText;
+            detectedLangArea.textContent = "English"; // Simulate detection
+        }
+
+        function copyToClipboard() {
+            const outputText = document.getElementById('outputText');
+            outputText.select();
+            document.execCommand('copy');
+            alert('Translation copied to clipboard!'); // Simple alert for demo
+        }
+    </script>
+</body>
+</html>

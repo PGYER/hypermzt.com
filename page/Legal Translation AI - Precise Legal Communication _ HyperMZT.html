@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Navigate international legal matters with confidence. Precise translation for legal professionals with HyperMZT's Legal Translation AI.">
+    <title>Legal Translation AI - Precise Legal Communication | HyperMZT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #212121; /* Professional Dark */
+            --secondary: #333333;
+            --accent: #d4af37; /* Gold Accent */
+            --light: #f5f5f5;
+            --dark: #000000;
+            --text: #444;
+            --background: #ffffff;
+            --card-bg: #fafafa;
+            --shadow: rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            background-color: var(--background);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.7em;
+            color: var(--primary);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--dark);
+            box-shadow: 0 4px 14px 0 rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #c0a02d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px 0 rgba(212, 175, 55, 0.6);
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #212121 0%, #333333 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+             content: "";
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L100,0 Z" fill="rgba(212, 175, 55, 0.05)"/></svg>');
+             background-size: cover;
+             opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+            color: inherit;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: var(--background);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--accent);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Precision Demo Section */
+        .precision-demo {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #eeeeee 100%);
+            text-align: center;
+        }
+
+        .demo-container {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            background-color: var(--background);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
+            text-align: left;
+        }
+
+        .demo-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .demo-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .demo-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .demo-content {
+                flex-direction: column;
+            }
+        }
+
+        .original-content, .translated-content {
+            flex: 1;
+            background-color: #fcfcfc;
+            border-radius: 6px;
+            padding: 15px;
+            border: 1px solid #eee;
+        }
+
+        .content-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.1rem;
+        }
+
+        .content-text {
+            font-size: 0.95rem;
+            white-space: pre-wrap; /* Preserves formatting for legal text */
+        }
+
+        .accuracy-badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--background);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+            position: relative;
+            border-left: 4px solid var(--primary);
+        }
+
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--accent);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            margin-right: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+        }
+
+
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+        }
+
+        .cta h2 {
+            color: inherit;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background-color: var(--background);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px var(--shadow);
+            background-color: var(--card-bg);
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: var(--card-bg);
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero {
+                padding: 160px 0 80px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Hyper<span>MZT</span> Legal</a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Precision Demo</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Legal Translation AI - Precise Legal Communication</h1>
+            <p>Navigate international legal matters with confidence. Precise translation for legal professionals.</p>
+            <div class="hero-btns">
+                <a href="#" class="btn btn-primary">Ensure Legal Accuracy</a>
+                <a href="#demo" class="btn" style="background-color: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3);">View Precision Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Built for Legal Precision</h2>
+                <p>Advanced AI ensuring accuracy in complex legal terminology.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Legal Terminology</h3>
+                    <p>Specialized models trained on vast legal databases for unparalleled accuracy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Context Awareness</h3>
+                    <p>Understands nuanced legal context to prevent misinterpretation of clauses.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Document Formats</h3>
+                    <p>Maintains original formatting for contracts, pleadings, and case files.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Data Security</h3>
+                    <p>Military-grade encryption and compliance with legal data protection standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precision Demo Section -->
+    <section id="demo" class="precision-demo">
+        <div class="container">
+            <h2>Witness Unmatched Legal Accuracy</h2>
+            <p>Compare standard translation with HyperMZT's Legal AI precision.</p>
+            <div class="demo-container">
+                <div class="demo-header">
+                    <h3>Demo: Contract Clause Translation</h3>
+                    <div><i class="fas fa-file-alt"></i> English to German</div>
+                </div>
+                <div class="demo-content">
+                    <div class="original-content">
+                        <div class="content-title"><i class="fas fa-flag-usa"></i> Original (English)</div>
+                        <div class="content-text">The Licensor hereby grants to the Licensee a non-exclusive, non-transferable license to use the Software solely for the purpose of internal business operations, subject to the terms and conditions set forth herein. This license is granted in perpetuity unless terminated by either party in accordance with Section 12.</div>
+                        <div class="accuracy-badge">Standard MT Accuracy: ~75%</div>
+                    </div>
+                    <div class="translated-content">
+                         <div class="content-title"><i class="fas fa-flag-de"></i> HyperMZT Legal AI (German)</div>
+                        <div class="content-text">Der Lizenzgeber gewährt dem Lizenznehmer hiermit eine nicht-exklusive, nicht übertragbare Lizenz zur Nutzung der Software ausschließlich zum Zwecke interner Geschäftsvorgänge, vorbehaltlich der hierin festgelegten Bedingungen. Diese Lizenz wird dauerhaft gewährt, es sei denn, sie wird von einer Partei gemäß Abschnitt 12 gekündigt.</div>
+                        <div class="accuracy-badge">HyperMZT Legal AI Accuracy: >98%</div>
+                    </div>
+                </div>
+                 <div class="demo-content">
+                    <div class="original-content">
+                        <div class="content-title"><i class="fas fa-flag-usa"></i> Original (English)</div>
+                        <div class="content-text">In the event of a material breach of this Agreement by either party, the non-breaching party may terminate this Agreement upon thirty (30) days' written notice to the breaching party, specifying the nature of the breach.</div>
+                        <div class="accuracy-badge">Standard MT Accuracy: ~70%</div>
+                    </div>
+                    <div class="translated-content">
+                         <div class="content-title"><i class="fas fa-flag-de"></i> HyperMZT Legal AI (German)</div>
+                        <div class="content-text">Im Falle einer wesentlichen Verletzung dieser Vereinbarung durch eine der Parteien kann die nicht verletzende Partei diese Vereinbarung durch dreißig (30) Tage schriftliche Mitteilung an die verletzende Partei kündigen, unter Angabe der Art der Verletzung.</div>
+                        <div class="accuracy-badge">HyperMZT Legal AI Accuracy: >97%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted by Legal Professionals</h2>
+                <p>Hear from law firms and legal departments worldwide.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">HyperMZT's Legal AI has become an indispensable tool in our international arbitration practice. The precision in translating complex contractual language is unmatched. It saves us countless hours of manual review.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R. K.</div>
+                        <div class="author-info">
+                            <h4>Robert Kowalski</h4>
+                            <p>Partner, Kowalski & Associates, Warsaw</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">We handle cross-border M&A deals, and accurate translation is critical. HyperMZT has eliminated translation errors that could have led to costly disputes. The AI understands the subtle differences in legal frameworks.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M. L.</div>
+                        <div class="author-info">
+                            <h4>Marie Leblanc</h4>
+                            <p>General Counsel, TechGlobal Inc., Paris</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Our firm deals with a high volume of legal documents from various jurisdictions. HyperMZT's speed and accuracy have streamlined our document review process significantly. It's a game-changer for legal translation.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A. S.</div>
+                        <div class="author-info">
+                            <h4>Ana Silva</h4>
+                            <p>Legal Operations Director, Silva & Partners, São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Elevate Your Legal Translation Standards</h2>
+            <p>Rely on AI-powered precision for your most critical legal communications. Request a demo today.</p>
+            <a href="#" class="btn btn-primary">Ensure Legal Accuracy</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Your questions about our legal translation platform.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How accurate is the translation for highly specialized legal terms? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our Legal AI boasts an accuracy rate of over 98% for specialized legal terminology. It's trained on millions of legal documents, case law, and statutes from multiple jurisdictions to ensure contextually correct translations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is the platform compliant with legal data protection regulations? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. HyperMZT Legal AI adheres to GDPR, CCPA, and other major data protection laws. All data is encrypted in transit and at rest, and we offer on-premise deployment options for maximum security.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can it handle different legal systems (Common Law, Civil Law, etc.)? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Certainly. Our AI models are trained on legal texts from both Common Law and Civil Law systems, among others. It understands the conceptual differences and translates terms appropriately for the target legal framework.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What file formats are supported? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We support all major document formats including Word (.docx), PDF, Excel, PowerPoint, as well as common text formats. The original formatting, including tables and legal citations, is preserved during translation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>HyperMZT Legal</h3>
+                    <p>Precision legal translation powered by AI.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Precision Demo</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Legal Glossaries</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Compliance Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> legal@hypermzt.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Global Legal Team</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 HyperMZT. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

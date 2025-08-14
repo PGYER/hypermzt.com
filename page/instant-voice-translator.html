@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instant Voice Translator - Have natural conversations in 100+ languages. Break language barriers with HyperMZT.">
+  <title>Instant Voice Translator - Conversations Without Borders | HyperMZT</title>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "HyperMZT Voice Translator",
+    "operatingSystem": "Android, iOS",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #0ea5e9;
+      --accent: #f97316;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+    }
+    
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo span {
+      margin-left: 0.5rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, #93c5fd 0%, transparent 70%);
+      opacity: 0.1;
+      animation: rotate 20s linear infinite;
+      z-index: 0;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .subheading {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--dark);
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 1rem 2.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+      transition: var(--transition);
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(249, 115, 22, 0.6);
+      background: #ea580c;
+    }
+    
+    .cta-button:active {
+      transform: translateY(1px);
+    }
+    
+    .hero-image {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      display: block;
+    }
+    
+    .translation-bubble {
+      position: absolute;
+      padding: 1rem;
+      background: white;
+      border-radius: 20px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+      display: flex;
+      align-items: center;
+      opacity: 0;
+    }
+    
+    .bubble1 {
+      top: 30%;
+      left: 5%;
+      width: 150px;
+      animation: fadeInBubble 1s ease-out 0.8s both;
+    }
+    
+    .bubble1::after {
+      content: "";
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      border: 8px solid transparent;
+      border-left-color: white;
+    }
+    
+    .bubble2 {
+      top: 50%;
+      right: 5%;
+      width: 150px;
+      animation: fadeInBubble 1s ease-out 1.2s both;
+    }
+    
+    .bubble2::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      border: 8px solid transparent;
+      border-right-color: white;
+    }
+    
+    .flag {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+      background-size: cover;
+    }
+    
+    .flag1 {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><path fill="%23C8102E" d="M0 0h60v30H0z"/><path d="M0 0v30l34.6-15L0 0z" fill="%23FFF"/></svg>');
+    }
+    
+    .flag2 {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><path fill="%23003248" d="M0 0h60v30H0z"/><circle cx="30" cy="15" r="7" fill="%23DA291C"/><path d="M25.5 10l9 5-9 5z" fill="%23DA291C"/></svg>');
+    }
+    
+    /* Stats Section */
+    .stats {
+      background: white;
+      padding: 4rem 2rem;
+    }
+    
+    .stats-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .stat-item {
+      padding: 2rem;
+      border-radius: 15px;
+      background: var(--light);
+      transition: var(--transition);
+    }
+    
+    .stat-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    
+    .stat-label {
+      color: var(--dark);
+      font-size: 1.1rem;
+    }
+    
+    /* Features */
+    .features {
+      background: #f1f5f9;
+      padding: 4rem 2rem;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: var(--dark);
+    }
+    
+    .features-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: var(--transition);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--secondary);
+    }
+    
+    .feature-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-desc {
+      color: #334155;
+    }
+    
+    /* Demo Video */
+    .demo {
+      padding: 4rem 2rem;
+      background: white;
+      text-align: center;
+    }
+    
+    .video-container {
+      max-width: 900px;
+      margin: 2rem auto 0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      aspect-ratio: 16/9;
+      background: #0f172a;
+    }
+    
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      background: #f1f5f9;
+      padding: 4rem 2rem;
+    }
+    
+    .testimonial-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      position: relative;
+    }
+    
+    .testimonial-card::before {
+      content: """;
+      font-size: 5rem;
+      position: absolute;
+      top: -1rem;
+      left: 1rem;
+      color: #cbd5e1;
+      font-family: Georgia;
+      line-height: 1;
+    }
+    
+    .testimonial-content {
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      color: #334155;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .author-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 1rem;
+      background: #94a3b8;
+      background-size: cover;
+    }
+    
+    .author-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .author-info p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    
+    /* FAQ */
+    .faq {
+      padding: 4rem 2rem;
+      background: white;
+    }
+    
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 0;
+      cursor: pointer;
+    }
+    
+    .faq-question {
+      font-size: 1.2rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-question::after {
+      content: "+";
+      font-size: 1.5rem;
+      transition: var(--transition);
+    }
+    
+    .faq-item.active .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding-top: 0;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding-top: 1.5rem;
+    }
+    
+    /* Final CTA */
+    .final-cta {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+    
+    .final-cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .final-cta p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .cta-secondary {
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
+    }
+    
+    .cta-secondary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      background: #ea580c;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      padding: 4rem 2rem 2rem;
+    }
+    
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .footer-heading {
+      color: white;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .footer-links a {
+      display: block;
+      color: #94a3b8;
+      margin-bottom: 0.5rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .trust-badges {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .badge {
+      width: 40px;
+      height: 40px;
+      background: #334155;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid #334155;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInBubble {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .subheading {
+        font-size: 1.2rem;
+      }
+      
+      .hero {
+        padding: 6rem 1.5rem 3rem;
+      }
+      
+      .hero-image {
+        margin-top: 1.5rem;
+      }
+      
+      .translation-bubble {
+        display: none; /* Hide bubbles on mobile */
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="navbar">
+      <a href="https://hypermzt.com" class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 2L21.8564 11.5L32 12.2873L24 19.2127L25.7128 29L16 24.5L6.28718 29L8 19.2127L0 12.2873L10.1436 11.5L16 2Z" fill="#2563EB"/>
+        </svg>
+        <span>HyperMZT</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+      </div>
+      <a href="https://www.pgyer.com/hyper-mzt" class="cta-button">Download Now</a>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Instant Voice Translator</h1>
+      <p class="subheading">Conversations Without Borders</p>
+      <p>Have natural conversations in 100+ languages. No more awkward silences or misunderstandings.</p>
+      <a href="https://www.pgyer.com/hyper-mzt" class="cta-button">Talk to Anyone, Anywhere</a>
+    </div>
+    
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1557804506-669a679da8b4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=1600" alt="People communicating across language barriers">
+      
+      <!-- Translation bubbles with animation -->
+      <div class="translation-bubble bubble1">
+        <div class="flag flag1"></div>
+        <span>Hello! How are you?</span>
+      </div>
+      
+      <div class="translation-bubble bubble2">
+        <div class="flag flag2"></div>
+        <span>¡Hola! ¿Cómo estás?</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Social Proof Stats -->
+  <section class="stats">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-number">1M+</div>
+        <div class="stat-label">Active Users</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Languages Supported</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Accuracy Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4.8/5</div>
+        <div class="stat-label">App Store Rating</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2 class="section-title">Key Features</h2>
+    <div class="features-container">
+      <div class="feature-card">
+        <div class="feature-icon">🎤</div>
+        <h3 class="feature-title">Real-time Translation</h3>
+        <p class="feature-desc">Speak naturally and hear translations instantly. Perfect for business meetings, travel, or casual conversations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Offline Mode</h3>
+        <p class="feature-desc">Essential languages available without internet. Ideal for travel where connectivity is limited.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <h3 class="feature-title">Multi-Person Mode</h3>
+        <p class="feature-desc">Effortless group conversations with automatic language detection and speaker identification.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <h3 class="feature-title">Text-to-Speech</h3>
+        <p class="feature-desc">Type text and have it spoken in any language. Great for learning pronunciation or accessibility needs.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Demo Video -->
+  <section class="demo" id="how-it-works">
+    <h2 class="section-title">See It In Action</h2>
+    <p>Watch how HyperMZT breaks language barriers in real life situations.</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/9I9iu_Wy10g?si=ZR2gY-dweefr45gP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </section>
+  
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2 class="section-title">What Users Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <p class="testimonial-content">"HyperMZT saved our business trip to Japan. We communicated effortlessly with our partners without needing a translator. This app truly bridges cultures!"</p>
+        <div class="testimonial-author">
+          <div class="author-img" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg')"></div>
+          <div class="author-info">
+            <h3>Michael Rodriguez</h3>
+            <p>Business Executive</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <p class="testimonial-content">"Traveling solo through Europe was a breeze with HyperMZT. From ordering food to asking directions, the translations were accurate and natural. Better than any phrasebook!"</p>
+        <div class="testimonial-author">
+          <div class="author-img" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg')"></div>
+          <div class="author-info">
+            <h3>Sarah Johnson</h3>
+            <p>Travel Blogger</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">Is HyperMZT free to use?</div>
+        <div class="faq-answer">
+          <p>HyperMZT offers a free version with basic translation features for common languages. Our Premium subscription unlocks offline mode, business vocabulary packs, and priority customer support.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How does HyperMZT work without internet?</div>
+        <div class="faq-answer">
+          <p>We use efficient on-device neural networks for core languages. Download languages before your trip and enjoy uninterrupted translations anywhere.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Which languages are supported?</div>
+        <div class="faq-answer">
+          <p>HyperMZT supports 100+ languages including Spanish, French, German, Chinese, Japanese, Arabic, Russian, Portuguese and Hindi. New languages are added monthly.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How accurate are the translations?</div>
+        <div class="faq-answer">
+          <p>Our translations achieve 98% accuracy for common phrases. Contextual learning improves accuracy over time for specialized conversations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2>Start Your Multilingual Journey Today</h2>
+    <p>Join millions of users who break language barriers with HyperMZT. Download now and speak with the world.</p>
+    <a href="https://www.pgyer.com/hyper-mzt" class="cta-secondary">Download Now for Free</a>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <a href="https://hypermzt.com" class="footer-logo">HyperMZT</a>
+        <p style="max-width: 300px;">Universal language for a connected world. Making conversations without borders possible since 2020.</p>
+        <div class="trust-badges">
+          <div class="badge">SSL</div>
+          <div class="badge">GDPR</div>
+          <div class="badge">ISO</div>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-heading">Product</h3>
+        <div class="footer-links">
+          <a href="https://hypermzt.com/features">Features</a>
+          <a href="https://hypermzt.com/download">Download</a>
+          <a href="https://hypermzt.com/pricing">Pricing</a>
+          <a href="https://hypermzt.com/enterprise">For Business</a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-heading">Resources</h3>
+        <div class="footer-links">
+          <a href="https://hypermzt.com/support">Help Center</a>
+          <a href="https://hypermzt.com/blog">Blog</a>
+          <a href="https://hypermzt.com/community">Community</a>
+          <a href="https://hypermzt.com/partners">Partners</a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-heading">Company</h3>
+        <div class="footer-links">
+          <a href="https://hypermzt.com/about">About Us</a>
+          <a href="https://hypermzt.com/careers">Careers</a>
+          <a href="https://hypermzt.com/contact">Contact</a>
+          <a href="https://hypermzt.com/press">Press</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copyright">
+      <p>&copy; 2023 HyperMZT Technologies. All rights reserved.</p>
+      <p><a href="https://hypermzt.com/privacy">Privacy Policy</a> | <a href="https://hypermzt.com/terms">Terms of Service</a> | <a href="https://hypermzt.com/cookies">Cookie Policy</a></p>
+    </div>
+  </footer>
+  
+  <script>
+    // FAQ functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+      } else {
+        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+      }
+    });
+    
+    // Animation observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    // Observe animation elements
+    document.querySelectorAll('.stat-item, .feature-card, .testimonial-card').forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
