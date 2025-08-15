@@ -46,7 +46,13 @@ const translations = {
             wearableTranslator: "可穿戴设备翻译器",
             crossCultural: "跨文化沟通",
             teamCollaboration: "国际团队协作",
-            remoteWork: "远程工作翻译器"
+            remoteWork: "远程工作翻译器",
+            conferenceInterpretation: "会议同声传译",
+            globalCustomerSupport: "全球客户支持",
+            airportTranslation: "机场翻译助手",
+            hotelCommunication: "酒店客户沟通",
+            restaurantMenu: "餐厅翻译菜单",
+            emergencyTranslation: "紧急翻译服务"
         },
         
         // 英雄区域
@@ -323,7 +329,13 @@ const translations = {
             wearableTranslator: "Wearable Device Translator", 
             crossCultural: "Cross-Cultural Communication",
             teamCollaboration: "International Team Collaboration",
-            remoteWork: "Remote Work Translator"
+            remoteWork: "Remote Work Translator",
+            conferenceInterpretation: "Conference Simultaneous Interpretation",
+            globalCustomerSupport: "Global Customer Support",
+            airportTranslation: "Airport Translation Assistant",
+            hotelCommunication: "Hotel Guest Communication",
+            restaurantMenu: "Restaurant Translation Menu",
+            emergencyTranslation: "Emergency Translation Service"
         },
         
         // Hero Section

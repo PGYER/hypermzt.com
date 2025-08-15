@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HyperMZT Emergency Translation Service - Critical communication when it matters most. Life-saving translation for first responders, healthcare, and emergency situations.">
+    <meta name="keywords" content="emergency translation, first responder communication, medical translation, crisis communication, emergency response, multilingual emergency services">
+    <title>Emergency Translation Service - Critical Communication When It Matters | HyperMZT</title>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "HyperMZT Emergency Translation Service",
+        "description": "Critical communication translation service for emergency situations and first responders",
+        "applicationCategory": "EmergencyApplication",
+        "operatingSystem": "iOS, Android, Web",
+        "downloadUrl": "https://www.pgyer.com/hyper-mzt",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "audience": {
+            "@type": "ProfessionalAudience",
+            "audienceType": "Emergency Services"
+        }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Emergency Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.95), rgba(185, 28, 28, 0.95)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><rect fill="%23dc2626" width="1000" height="600"/><polygon fill="%23fbbf24" points="100,50 200,50 150,150"/><polygon fill="%23fbbf24" points="800,400 900,400 850,500"/><circle fill="%23f59e0b" cx="300" cy="200" r="30"/><circle fill="%23f59e0b" cx="700" cy="350" r="40"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 110px 0 90px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 98px,
+                rgba(251, 191, 36, 0.1) 100px,
+                rgba(251, 191, 36, 0.1) 102px
+            );
+            animation: emergencyFlash 3s linear infinite;
+        }
+        
+        @keyframes emergencyFlash {
+            0%, 50%, 100% { opacity: 0.7; }
+            25%, 75% { opacity: 1; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .emergency-badge {
+            display: inline-block;
+            background: #fbbf24;
+            color: #1a202c;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: urgentPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes urgentPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 5.2vw, 4.2rem);
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            animation: criticalFadeIn 1s ease-out;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 40px;
+            color: #fef3c7;
+            animation: criticalFadeIn 1s ease-out 0.2s both;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        @keyframes criticalFadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #1a202c;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.5);
+            transition: all 0.3s ease;
+            animation: criticalFadeIn 1s ease-out 0.4s both;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.7);
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+        }
+        
+        .video-container {
+            margin-top: 70px;
+            animation: criticalFadeIn 1s ease-out 0.6s both;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 3px solid #fbbf24;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        /* Critical Features Section */
+        .features {
+            padding: 110px 0;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 90px;
+        }
+        
+        .section-title h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            color: #1a202c;
+            margin-bottom: 20px;
+            position: relative;
+            font-weight: 600;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #fbbf24);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid #dc2626;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.05), transparent);
+            transition: left 0.5s;
+        }
+        
+        .feature-card:hover::before {
+            left: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-left-color: #fbbf24;
+        }
+        
+        .feature-icon {
+            font-size: 3.5rem;
+            color: #dc2626;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            color: #1a202c;
+            position: relative;
+            z-index: 2;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: #4a5568;
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+            font-size: 1.05rem;
+        }
+        
+        /* Emergency Services Social Proof */
+        .social-proof {
+            padding: 110px 0;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: white;
+        }
+        
+        .social-proof .section-title h2 {
+            color: #fbbf24;
+        }
+        
+        .social-proof .section-title p {
+            color: #cbd5e0;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 35px;
+            margin-top: 70px;
+        }
+        
+        .testimonial {
+            background: rgba(220, 38, 38, 0.1);
+            padding: 35px;
+            border-radius: 15px;
+            border-left: 5px solid #fbbf24;
+            backdrop-filter: blur(10px);
+            position: relative;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 25px;
+            font-size: 4.5rem;
+            color: #fbbf24;
+            opacity: 0.4;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 25px;
+            color: #e2e8f0;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        
+        .author-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #dc2626, #fbbf24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .author-info h4 {
+            color: #fbbf24;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .author-info span {
+            color: #cbd5e0;
+            font-size: 0.95rem;
+        }
+        
+        /* Critical Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 35px;
+            margin-top: 70px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 35px 25px;
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+            border: 2px solid #fbbf24;
+        }
+        
+        .stat-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .stat-label {
+            font-size: 1.05rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+        
+        /* Emergency Response Demo */
+        .demo {
+            padding: 110px 0;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1a202c;
+            text-align: center;
+        }
+        
+        .demo h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .demo p {
+            font-size: 1.3rem;
+            margin-bottom: 60px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+        
+        .demo-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 70px;
+        }
+        
+        .demo-feature {
+            background: rgba(26, 32, 44, 0.9);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+            border: 2px solid rgba(220, 38, 38, 0.3);
+        }
+        
+        .demo-feature i {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #fbbf24;
+        }
+        
+        .demo-feature h3 {
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+        }
+        
+        .demo-feature p {
+            margin-bottom: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        /* Emergency FAQ */
+        .faq {
+            padding: 110px 0;
+            background: #f8fafc;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border-left: 4px solid #dc2626;
+        }
+        
+        .faq-question {
+            padding: 28px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #1a202c;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .faq-question:hover {
+            background: rgba(220, 38, 38, 0.05);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.8rem;
+            color: #dc2626;
+            transition: transform 0.3s ease;
+            font-weight: 300;
+        }
+        
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            padding: 0 28px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 0 28px 28px;
+            max-height: 250px;
+        }
+        
+        .faq-answer p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* Emergency Footer */
+        .footer {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: white;
+            padding: 80px 0 40px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 45px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 25px;
+            color: #fbbf24;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #cbd5e0;
+            text-decoration: none;
+            line-height: 2;
+            font-size: 1.05rem;
+        }
+        
+        .footer-section a:hover {
+            color: #fbbf24;
+            transition: color 0.3s ease;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            background: rgba(220, 38, 38, 0.2);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            color: #fbbf24;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #475569;
+            padding-top: 35px;
+            text-align: center;
+            color: #cbd5e0;
+        }
+        
+        /* Emergency CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #dc2626 0%, #1a202c 100%);
+            padding: 90px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 25px;
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 45px;
+            opacity: 0.95;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 90px 0 70px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .demo-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .trust-badges {
+                justify-content: center;
+            }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .hero::before,
+            .emergency-badge {
+                animation: none;
+            }
+            
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        .cta-button:focus,
+        .faq-question:focus {
+            outline: 3px solid #fbbf24;
+            outline-offset: 3px;
+        }
+        
+        @media (prefers-contrast: high) {
+            .hero {
+                background: #000;
+            }
+            
+            .feature-card {
+                border: 3px solid #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="emergency-badge">
+                    <i class="fas fa-exclamation-triangle"></i> Critical Communication
+                </div>
+                <h1>When Every Second Counts, Communication Saves Lives</h1>
+                <p>HyperMZT's emergency translation service ensures first responders, medical teams, and emergency personnel can communicate clearly with anyone, anywhere, in any crisis situation.</p>
+                <a href="https://www.pgyer.com/hyper-mzt" class="cta-button">
+                    <i class="fas fa-shield-alt"></i> Be Prepared
+                </a>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/9I9iu_Wy10g?si=ZR2gY-dweefr45gP" 
+                                title="HyperMZT Emergency Translation Service Demo" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Critical Communication Tools</h2>
+                <p>Professional-grade translation technology designed for high-stakes emergency situations</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Medical Emergency Support</h3>
+                    <p>Instantly translate symptoms, medical history, and treatment instructions between patients and healthcare providers in critical situations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3>First Responder Communication</h3>
+                    <p>Enable firefighters, EMTs, and police to gather crucial information from witnesses and victims who speak different languages</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Emergency Room Translation</h3>
+                    <p>Facilitate rapid triage and treatment decisions with accurate medical translation that understands critical healthcare terminology</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Crisis Situation Management</h3>
+                    <p>Coordinate emergency evacuations, disaster response, and crisis communication with affected populations in their native languages</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Emergency Call Center Support</h3>
+                    <p>Empower 911 operators and emergency dispatchers to handle calls from non-English speakers with real-time voice translation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Infection Control Protocol</h3>
+                    <p>Communicate safety procedures, quarantine instructions, and health guidelines clearly during pandemic or outbreak responses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted by Emergency Services Nationwide</h2>
+                <p>Critical communication tools used by first responders and medical professionals</p>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Emergency Departments</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Always Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3 sec</div>
+                    <div class="stat-label">Response Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime Guarantee</div>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>HyperMZT saved valuable time during a cardiac emergency with a Spanish-speaking patient. The medical translations were precise and allowed us to get crucial information about allergies and medications immediately.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DR</div>
+                        <div class="author-info">
+                            <h4>Dr. Rachel Thompson</h4>
+                            <span>Emergency Physician, City General Hospital</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>As a 911 dispatcher, I rely on HyperMZT daily. Last week, I handled a house fire call from a Mandarin speaker and was able to get exact location details that saved precious response time.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>Mike Lopez</h4>
+                            <span>Emergency Dispatcher, Metro Emergency Services</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>During the hurricane evacuation, HyperMZT helped us communicate shelter information to hundreds of residents who spoke different languages. It was absolutely essential for public safety.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SK</div>
+                        <div class="author-info">
+                            <h4>Sarah Kim</h4>
+                            <span>Emergency Management Director, County Office</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo">
+        <div class="container">
+            <h2>Real Emergency Scenarios</h2>
+            <p>See how HyperMZT handles critical communication when lives are on the line</p>
+            
+            <div class="demo-features">
+                <div class="demo-feature">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Cardiac Event Response</h
